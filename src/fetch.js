@@ -22,7 +22,7 @@ export async function loadPage(page) {
   createCard(data);
 }
 
-export async function searchPage(page, keyword) {
+export async function loadSearchPage(page, keyword) {
   const data = await loadJSON(
     `https://api.themoviedb.org/3/search/movie?api_key=${apikey}&query=${keyword}&include_adult=false&language=en-US&page=${page}`
   );

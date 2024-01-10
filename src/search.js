@@ -1,5 +1,5 @@
 // 검색 페이지 파일
-import { searchPage, loadGenre } from "./fetch.js";
+import { loadSearchPage, loadGenre } from "./fetch.js";
 import { handleClickCard } from "./movie.js";
 
 let currentPage = 1;
@@ -8,12 +8,12 @@ let keyword = "spider";
 
 async function load() {
   await loadGenre();
-  searchPage(currentPage, keyword);
+  loadSearchPage(currentPage, keyword);
 }
 
 function morePage() {
   currentPage++;
-  searchPage(currentPage, keyword);
+  loadSearchPage(currentPage, keyword);
 }
 
 load();
