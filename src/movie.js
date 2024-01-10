@@ -12,7 +12,6 @@ export function createCard(response) {
 function cardHTML(movie) {
   const cardDiv = document.createElement("div");
   cardDiv.id = movie.id;
-
   const imgElement = document.createElement("img");
   imgElement.classList.add("poster");
   imgElement.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
