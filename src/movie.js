@@ -44,7 +44,6 @@ function cardHTML(movie) {
 }
 
 function createGenreList(ele_id, genre_ids) {
-  console.log(genreList);
   const genreName = genreList.filter((genre) => genre_ids.includes(genre.id));
   const genreListElement = document.getElementById(`${ele_id}`).querySelector(".genre");
 

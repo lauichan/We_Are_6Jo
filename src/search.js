@@ -6,14 +6,17 @@ let currentPage = 1;
 
 let keyword = "spider";
 
-loadGenre();
-searchPage(currentPage, keyword);
+async function load() {
+  loadGenre();
+  searchPage(currentPage, keyword);
+}
 
 function morePage() {
   currentPage++;
   searchPage(currentPage, keyword);
 }
 
+load();
 document.getElementById("searchInput").focus();
 document.getElementById("morePage").addEventListener("click", morePage);
 document.getElementById("movies").addEventListener("click", handleClickCard);
