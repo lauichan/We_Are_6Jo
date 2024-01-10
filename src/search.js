@@ -7,7 +7,7 @@ let currentPage = 1;
 let keyword = "spider";
 
 async function load() {
-  loadGenre();
+  await loadGenre();
   searchPage(currentPage, keyword);
 }
 
