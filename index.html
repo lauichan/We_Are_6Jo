@@ -3,21 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="app.js"></script>
     <title>영화 평점 순위</title>
-    <script type="module" src="src/main.js"></script>
-    <link rel="stylesheet" href="style/reset.css" />
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
     <header class="container">
       <h1><a href="https://lauichan.github.io/tmdb-api-movie/">영화 리스트</a></h1>
 
-      <form id="search">
-        <input id="searchInput" type="text" placeholder="검색어를 입력해주세요." />
+      <form id="search" action="search.html">
+        <input id="searchInput" type="text" name="aaa" placeholder="검색어를 입력해주세요." />
         <button id="searchBtn" type="submit">검색</button>
       </form>
     </header>
+
+    <ul class="nav">
+      <li class="navList">
+        <button class="tag">리스트1</button>
+      </li>
+      <li class="navList">
+        <button class="tag">리스트2</button>
+      </li>
+      <li class="navList">
+        <button class="tag">리스트3</button>
+      </li>
+      <li class="navList">
+        <button class="tag">리스트4</button>
+      </li>
+      <li class="navList">
+        <button class="tag">리스트5</button>
+      </li>
+      <li class="navList">
+        <button class="tag">리스트6</button>
+      </li>
+      <li class="navList">
+        <button class="tag">리스트7</button>
+      </li>
+    </ul>
 
     <main class="container">
       <section id="movies"></section>
