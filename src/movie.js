@@ -83,5 +83,5 @@ export async function loadPost(backdrop_path, title, release_date, genres, overv
   <button class="detail_movie_appreciate">감상하기</button>
 </section>`;
 
-  await document.getElementById("moviePost").insertAdjacentHTML("beforeend", dataDown);
+  document.getElementById("moviePost").insertAdjacentHTML("beforeend", dataDown);
 }
