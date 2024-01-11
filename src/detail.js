@@ -30,17 +30,25 @@ console.log("생성체크용", load());
 // ui를 생성할 때 localstorage를 get한다..
 //
 
-// ----------------------------------------------------------------------------------
-/* 리뷰 함수 */
+// ----------------------------------------------------------------------------------//
+// 리뷰 함수
 
-const paintCard = document.getElementById("detailCommentReviewWrap"); //댓글창 form id입니다
-const userId = document.getElementById("detailReviewUserId"); //user id입니다
-const userPwd = document.getElementById("detailReviewUserPwd"); // user pwd입니다
-const userReview = document.getElementById("detailReviewContent"); //user review입니다
-const starPoint = document.getElementById("detailReviewStar"); //user 별점입니다.
-const submitBtn = document.getElementById("detailReviewSubmitBtn"); // 제출버튼입니다.
+// 위치 ?.?
+const paintCard = document.getElementById("detailCommentReviewWrap");
+const userId = document.getElementById("detailReviewUserId");
+const userPwd = document.getElementById("detailReviewUserPwd");
+const userStar = document.getElementById("userInputStar");
+const submitBtn = document.getElementById("detailReviewSubmitBtn");
 
-// 리뷰 보내는 함수
+let reviewStorage = [];
+
+// 리뷰 저장하기
+function savedReview() {
+  localStorage.setItem("review", JSON.stringify(reviewStorage));
+  console.log(reviewStorage.length);
+}
+
+// 리뷰 보내기
 function sendReview(e) {
   e.preventDefault();
 
@@ -48,34 +56,14 @@ function sendReview(e) {
   const reviewValue = {
     id: userId.value,
     pwd: userPwd.value,
-    content: userReview.value,
-    star: starPoint.value
+    star: userStar.value
   };
+  console.log(id, pwd, star);
+  // 스토리지에 추가
+  reviewStorage.push(reviewValue);
+
+  // 로컬 스토리지에 저장
+  savedReview();
 }
-console.log(reviewValue);
 
-// window.localStorage.setItem
-
-// async function loadReview(){
-//   const querySnapshot = await getItem(userId){
-
-//     querySnapshot.forEach(window.localStorage)
-
-//     `<li>
-//       <div class="detail_comment_list_img">
-//         <img src="#list_img" alt="댓글다는 사용자 사진" />
-//         <div class="detail_comment_list_user">
-//           <div class="detail_comment_list_user_id" id="userId">사용자 id</div>
-//           <div class="detail_comment_list_user_text" id="userInputComment">사용자가 쓴 내용</div>
-//           <div class="detail_comment_list_user_star" id="userInputStar">사용자의 영화 점수</div>
-//         </div>
-//       </div>
-//     </li>`
-//   }
-// }
-
-const comment1 = new ReviewValue(getItem);
-
-async function makeReview() {}
-
-// 입력한 정보를 가져와 추가하는 함수
+submitBtn.addEventListener("click", sendReview);
