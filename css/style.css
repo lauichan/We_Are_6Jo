@@ -1,5 +1,13 @@
 :root {
   --border-color: #ddd;
+  --movie-genreCrim-color: crimson;
+  --movie-genreAdventure-color: green;
+  --movie-genreDrama-color: purple;
+  --movie-genreRomance-color: deeppink;
+  --movie-genreAnimation-color: dodgerblue;
+  --movie-genreComedy-color: goldenrod;
+  --movie-genreAction-color: orangered;
+  --movie-genreFantasy-color: violet;
 }
 
 * {
@@ -165,43 +173,43 @@ header > h1 {
 }
 
 #movies .genre .crime {
-  color: crimson;
-  border-color: crimson;
+  color: var(--movie-genreCrim-color);
+  border-color: var(--movie-genreCrim-color);
 }
 
 #movies .genre .adventure {
-  color: green;
-  border-color: green;
+  color: var(--movie-genreAdventure-color);
+  border-color: var(--movie-genreAdventure-color);
 }
 
 #movies .genre .drama {
-  color: purple;
-  border-color: purple;
+  color: var(--movie-genreDrama-color);
+  border-color: var(--movie-genreDrama-color);
 }
 
 #movies .genre .romance {
-  color: deeppink;
-  border-color: deeppink;
+  color: var(--movie-genreRomance-color);
+  border-color: var(--movie-genreRomance-color);
 }
 
 #movies .genre .animation {
-  color: dodgerblue;
-  border-color: dodgerblue;
+  color: var(--movie-genreAnimation-color);
+  border-color: var(--movie-genreAnimation-color);
 }
 
 #movies .genre .comedy {
-  color: goldenrod;
-  border-color: goldenrod;
+  color: var(--movie-genreComedy-color);
+  border-color: var(--movie-genreComedy-color);
 }
 
 #movies .genre .action {
-  color: orangered;
-  border-color: orangered;
+  color: var(--movie-genreAction-color);
+  border-color: var(--movie-genreAction-color);
 }
 
 #movies .genre .fantasy {
-  color: violet;
-  border-color: violet;
+  color: var(--movie-genreFantasy-color);
+  border-color: var(--movie-genreFantasy-color);
 }
 
 .page {

@@ -1,7 +1,8 @@
 import { createCard } from "./movie.js";
+import { apikey } from "./apikeys.js";
 
 let urls = "https://api.themoviedb.org/3/";
-let apikey = `388873b1cb481f0c6145471233ca6035`;
+
 export let genreList;
 
 export async function loadJSON(url) {
@@ -17,10 +18,14 @@ export async function loadGenre() {
 }
 
 export async function loadPage(page) {
-  const data = await loadJSON(
-    `${urls}movie/top_rated?api_key=388873b1cb481f0c6145471233ca6035&language=en&page=${page}`
-  );
+  const data = await loadJSON(`${urls}movie/top_rated?api_key=${apikey}&language=en&page=${page}`);
+
   createCard(data);
+}
+
+export async function moviePage(movie_id) {
+  const data = await loadJSON(`${urls}movie/${movie_id}?api_key=${apikey}&language=en`);
+  console.log(data); //별도의 영화 id를 추가해서 정보를 빼려고 준비중입니다.
 }
 
 export async function searchPage(page, keyword) {
