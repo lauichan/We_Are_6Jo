@@ -41,7 +41,7 @@ async function handleClickCard(event) {
 const paintCard = document.getElementById("detailCommentReviewWrap");
 const userId = document.getElementById("detailReviewUserId");
 const userPwd = document.getElementById("detailReviewUserPwd");
-const userStar = document.getElementById("userInputStar");
+const userStar = document.getElementById("detailReviewStar");
 const submitBtn = document.getElementById("detailReviewSubmitBtn");
 
 let reviewStorage = [];
@@ -51,6 +51,9 @@ function savedReview() {
   localStorage.setItem("review", JSON.stringify(reviewStorage));
   console.log(reviewStorage.length);
 }
+
+// 저장버튼을 클릭하면 리뷰 데이터가 로컬스토리지에 저장한다.
+submitBtn.addEventListener("click", savedReview);
 
 // 리뷰 보내기
 function sendReview(e) {
@@ -62,12 +65,39 @@ function sendReview(e) {
     pwd: userPwd.value,
     star: userStar.value
   };
-  console.log(id, pwd, star);
+
   // 스토리지에 추가
   reviewStorage.push(reviewValue);
 
   // 로컬 스토리지에 저장
   savedReview();
 }
+
+function getComments() {
+  let comments = localStorage.getItem();
+
+  if (comments) {
+    return JSON.parse(comments);
+  } else {
+    return [];
+  }
+}
+
+function loadComments() {
+  let comments = getComments();
+
+  for (let i = 0; i < comments.length; i++) {
+    let comment = comments[i];
+
+    // let listItem = document.createElement('li');
+    // listItem.innerHTML =
+    //   '<strong>' + comment.user + ':</strong> ' + comment.review;
+
+    // commentList.appendChild(listItem);
+    console.log(comment);
+  }
+}
+
+loadComments();
 
 submitBtn.addEventListener("click", sendReview);
