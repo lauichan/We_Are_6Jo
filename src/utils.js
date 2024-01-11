@@ -1,7 +1,9 @@
 export function checkLastPage() {
-  if (document.querySelectorAll("#movies > div").length < 20) {
-    console.log("none");
-    document.getElementById("morePage").style.display = "none";
+  const cardCount = document.querySelectorAll("#movies > div").length;
+  const morePageBtn = document.getElementById("morePage");
+  if (cardCount < 20) {
+    morePageBtn.disabled = true;
+    morePageBtn.textContent = cardCount === 0 ? "검색결과가 없습니다." : "다음 페이지가 없습니다.";
   }
 }
 

@@ -21,7 +21,6 @@ function renderCardHTML(movie) {
   <div id="${movie.id}">
     <img class="poster" src="${src}" alt="${movie.title}"/>
     <h2 class="title">${movie.title}</h2>
-    <p class="overview">${movie.overview}</p>
     <ul class="genre"></ul>
     <p class="vote">${(movie.vote_average * 10).toFixed(1)}%</p>
   </div>`;
@@ -41,10 +40,7 @@ export function handleClickCard(event) {
   const cardList = document.getElementById("movies");
   if (event.target === cardList) return;
   let target = event.target.matches("div") ? event.target : event.target.parentNode;
-  alert(`영화 id: ${target.id}`);
-  target.classList.toggle("click");
   location.href = `detail.html?id=${target.id}`;
-  console.log("click");
 }
 
 export async function loadPost({ id, backdrop_path, title, release_date, genres, overview }) {

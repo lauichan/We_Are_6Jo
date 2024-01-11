@@ -6,7 +6,6 @@ import { navigateToSearch } from "./utils.js";
 let currentPage = 1;
 
 const keyword = new URL(location.href).searchParams.get("query");
-console.log(keyword);
 
 async function load() {
   await loadGenre();
