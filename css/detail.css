@@ -78,7 +78,7 @@ body {
 }
 
 .detail_comment {
-  margin: 20px;
+  margin: 40px;
 }
 
 .detail_comment_title {
@@ -96,6 +96,7 @@ body {
   align-items: center;
   margin-bottom: 20px;
   border-radius: 5%;
+  margin-left: 90px;
 }
 
 .detail_comment_list_img img {
@@ -167,4 +168,48 @@ body {
 .detail_comment_list_user_score {
   padding-left: 40px;
   padding-top: 10px;
+}
+
+#detailCommentReviewWrap {
+  border-radius: 10px;
+  padding: 20px;
+  width: 600px;
+  border: 1px solid black;
+  margin-left: 600px;
+}
+
+#detailCommentReviewWrap > .detail_review_userId,
+#detailCommentReviewWrap > .detail_review_userPwd {
+  margin: 10px;
+  padding: 5px;
+}
+
+#detailCommentReviewWrap > .detail_review_content > .detail_review_text {
+  padding: 40px;
+  width: 500px;
+}
+
+#detailCommentReviewWrap > .detail_review_content > .detail_review_star {
+  margin-left: 490px;
+}
+
+.detail_comment {
+  margin: 10px;
+}
+
+.detail_comment_list_img {
+  margin-top: 40px;
+}
+
+.detail_comment_list_user_star {
+  padding-left: 1500px;
+  padding-top: 4px;
+  font-size: small;
+  background-color: aqua;
+}
+
+.detail_comment_list_user_text {
+  font-size: 12px;
+  padding: 10px;
+  background-color: #007bff;
 }
