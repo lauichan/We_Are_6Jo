@@ -3,13 +3,13 @@ import { genreList } from "./fetch.js";
 export function createCard(response) {
   const movies = response.results;
 
-  movies.forEach((movie) => {
-    document.getElementById("movies").insertAdjacentHTML("beforeend", cardHTML(movie));
-    createGenreList(movie.id, movie.genre_ids);
-  });
+  let html = "";
+  movies.forEach((movie) => (html += renderCardHTML(movie)));
+  document.getElementById("movies").insertAdjacentHTML("beforeend", html);
+  movies.forEach((movie) => createGenreList(movie.id, movie.genre_ids));
 }
 
-function cardHTML(movie) {
+function renderCardHTML(movie) {
   return `
   <div id="${movie.id}">
     <img class="poster" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" title="${movie.id}"/>
@@ -20,16 +20,13 @@ function cardHTML(movie) {
   </div>`;
 }
 
-// 장르를 불러오는 함수를 사용하고싶어서 export했습니다.
-function createGenreList(ele_id, genre_ids) {
-  const genreName = genreList.filter((genre) => genre_ids.includes(genre.id));
-  const genreListElement = document.getElementById(`${ele_id}`).querySelector(".genre");
+function createGenreList(movieId, genreIds) {
+  const genreName = genreList.filter((genre) => genreIds.includes(genre.id));
+  const genreListElement = document.getElementById(`${movieId}`).querySelector(".genre");
 
   genreName.forEach((genre) => {
-    const liElement = document.createElement("li");
-    liElement.classList.add(`${genre.name.toLowerCase().replace(" ", "")}`);
-    liElement.textContent = genre.name;
-    genreListElement.appendChild(liElement);
+    const li = `<li class=${genre.class}>${genre.name}</li>`;
+    genreListElement.insertAdjacentHTML("beforeend", li);
   });
 }
 
@@ -45,8 +42,6 @@ export function handleClickCard(event) {
 
 export async function loadPost({ id, backdrop_path, title, release_date, genres, overview }) {
   let dataLoad = `
-
-
   <main class="detail_main">
     <div class="detail_bg">
       <img src="https://image.tmdb.org/t/p/original${backdrop_path}" alt="영화이미지" class="detail_bg_img"/>
@@ -65,6 +60,6 @@ export async function loadPost({ id, backdrop_path, title, release_date, genres,
   </section>`;
 
   document.getElementById("moviePost").insertAdjacentHTML("beforeend", dataLoad);
-  let genre_ids = genres.map((a) => a.id);
-  createGenreList(id, genre_ids);
+  let genreIds = genres.map((a) => a.id);
+  createGenreList(id, genreIds);
 }
