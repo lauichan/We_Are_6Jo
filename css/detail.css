@@ -34,8 +34,8 @@ body {
 }
 
 .detail_bg_img {
-  max-width: 100%;
-  height: auto;
+  width: 500px;
+  height: 500px;
 }
 
 .detail_movie_title {
@@ -45,6 +45,7 @@ body {
 
 .detail_movie_wrap_two {
   margin-bottom: 10px;
+  display: flex;
 }
 
 .detail_movie_wrap_time_genre {
@@ -71,6 +72,8 @@ body {
   border: none;
   cursor: pointer;
   font-size: 16px;
+  margin-top: 30px;
+  margin-left: 1000px;
 }
 
 .detail_comment {
@@ -105,4 +108,13 @@ body {
 .detail_comment_list_user_score {
   font-style: italic;
   color: #888;
+}
+
+.detail_section {
+  margin: 100px;
+}
+
+#moviePost {
+  display: flex;
+  margin-top: 10px;
 }
