@@ -24,4 +24,3 @@ load();
 document.getElementById("searchInput").focus();
 document.getElementById("morePage").addEventListener("click", morePage);
 document.getElementById("movies").addEventListener("click", handleClickCard);
-document.getElementById("search").addEventListener("submit", search);

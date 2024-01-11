@@ -1,6 +1,5 @@
-import { createCard, loadPost } from "./movie.js";
+import { createCard, loadPost, checkLastPage } from "./movie.js";
 import { apikey } from "./apikeys.js";
-import { checkLastPage } from "./utils.js";
 
 let urls = "https://api.themoviedb.org/3/";
 
