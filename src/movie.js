@@ -65,16 +65,16 @@ export function handleClickCard(event) {
   console.log("click");
 }
 
-export async function loadPost(backdrop_path, title, release_date, genres, overview) {
-  let dataDown = `<main class="detail_main">
+export async function loadPost({ backdrop_path, title, release_date, genres, overview }) {
+  let dataLoad = `<main class="detail_main">
   <div class="detail_bg">
-    <img src="https://image.tmdb.org/t/p/w500${backdrop_path}" alt="영화이미지" class="detail_bg_img"/>
+    <img src="https://image.tmdb.org/t/p/original${backdrop_path}" alt="영화이미지" class="detail_bg_img"/>
   </div>
 </main>
 <section class="detail_section">
   <h1 class="detail_movie_title">${title}</h1>
   <div class="detail_movie_wrap_two">
-    <span class="detail_movie_wrap_time_genre">${genres}</span>
+    <span class="detail_movie_wrap_time_genre">${genres.id}</span>
     <p class="detail_movie_wrap_year">${release_date}</p>
   </div>
   <div class="detail_movie_over_view">
@@ -83,5 +83,5 @@ export async function loadPost(backdrop_path, title, release_date, genres, overv
   <button class="detail_movie_appreciate">감상하기</button>
 </section>`;
 
-  await document.getElementById("moviePost").insertAdjacentHTML("beforeend", dataDown);
+  await document.getElementById("moviePost").insertAdjacentHTML("beforeend", dataLoad);
 }
