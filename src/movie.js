@@ -64,3 +64,24 @@ export function handleClickCard(event) {
   location.href = `detail.html?id=${target.id}`;
   console.log("click");
 }
+
+export async function loadPost(backdrop_path, title, release_date, genres, overview) {
+  let dataDown = `<main class="detail_main">
+  <div class="detail_bg">
+    <img src="https://image.tmdb.org/t/p/w500${backdrop_path}" alt="영화이미지" class="detail_bg_img"/>
+  </div>
+</main>
+<section class="detail_section">
+  <h1 class="detail_movie_title">${title}</h1>
+  <div class="detail_movie_wrap_two">
+    <span class="detail_movie_wrap_time_genre">${genres}</span>
+    <p class="detail_movie_wrap_year">${release_date}</p>
+  </div>
+  <div class="detail_movie_over_view">
+    <p class="detail_movie_over_view_text">${overview}</p>
+  </div>
+  <button class="detail_movie_appreciate">감상하기</button>
+</section>`;
+
+  await document.getElementById("moviePost").insertAdjacentHTML("beforeend", dataDown);
+}
