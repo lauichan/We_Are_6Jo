@@ -12,11 +12,6 @@ console.log("생성체크용", load());
 
 // document.getElementById("movies").addEventListener("click", handleClickCard);
 
-// async function creatMoviePage() {
-//   const movieContainer = document.getElementById("moviePost");
-//   const cardHtml = movieBox.createCard();
-// }
-
 //localStorage.getItem('key');
 //localStorage.getItem('username'); 예시
 
