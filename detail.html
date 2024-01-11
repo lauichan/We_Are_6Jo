@@ -40,20 +40,29 @@
     <section class="detail_comment">
       <div class="detail_comment_title">영화 사용자 감상평</div>
       <!--모음-->
-      <form class="detail_comment_review_wrap" id="detailCommentReviewWrap">
-        <ul class="detail_comment_wrap_list">
-          <!--여기에 댓글들이 있음-->
-          <li>
-            <div class="detail_comment_list_img">
-              <img src="#list_img" alt="댓글다는 사용자 사진" />
-              <div class="detail_comment_list_user">
-                <div class="detail_comment_list_user_id">사용자 id</div>
-                <div class="detail_comment_list_user_text">사용자가 쓴 내용</div>
-                <div class="detail_comment_list_user_score">사용자가 쓴 점수</div>
-              </div>
+
+      <ul class="detail_comment_wrap_list">
+        <!--댓글들 불러와서 붙이기-->
+        <li>
+          <div class="detail_comment_list_img">
+            <img src="#list_img" alt="댓글다는 사용자 사진" />
+            <div class="detail_comment_list_user">
+              <div class="detail_comment_list_user_id">사용자 id</div>
+              <div class="detail_comment_list_user_text">사용자가 쓴 내용</div>
+              <div class="detail_comment_list_user_score">사용자가 쓴 점수</div>
             </div>
-          </li>
-        </ul>
+          </div>
+        </li>
+      </ul>
+      <!--댓글 창 만들기-->
+      <form class="detail_comment_review_wrap" id="detailCommentReviewWrap">
+        <input type="text" class="detail_review_userId" placeholder="아이디" />
+        <input type="password" class="detail_review_userPwd" placeholder="비밀번호" />
+        <div class="detail_review_content">
+          <textarea class="detail_review_text" placeholder="영화 감상평을 남겨주세요."></textarea>
+        </div>
+        <button type="button" id="detail_review_modify_btn">수정</button>
+        <button type="submit" id="detail_review_submit_btn">저장</button>
       </form>
     </section>
   </body>

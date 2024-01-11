@@ -33,3 +33,10 @@ async function handleClickCard(event) {
 // 새로고침하더라도 없어지지 않는 방식을 구현해야함.
 // ui를 생성할 때 localstorage를 get한다..
 //
+
+// ----------------------------------------------------------------------------------
+/* 리뷰 등록 함수 */
+
+async function paintReview() {
+  const paintCard = document.getElementById("detailCommentReviewWrap");
+}
