@@ -13,11 +13,10 @@ export async function loadJSON(url) {
 
 export async function loadGenre() {
   const response = await loadJSON(`${urls}genre/movie/list?api_key=${apikey}&language=en`); // 중복되는 url을 변수로 지정하면 추후에 변할 때도 적용이 가능하기때문에
-  const data = data.map((genre) => {
+  const data = response.genres;
+  genreList = data.map((genre) => {
     return { ...genre, class: genre.name.toLowerCase().replace(" ", "") };
   });
-  genreList = response.genres;
-  console.log(genreList);
 }
 
 export async function loadPage(page) {
@@ -32,8 +31,6 @@ export async function moviePage(movie_id) {
 }
 
 export async function searchPage(page, keyword) {
-  const data = await loadJSON(
-    `${urls}search/movie?api_key=${apikey}=${keyword}&include_adult=false&language=en-US&page=${page}`
-  );
+  const data = await loadJSON(`${urls}search/movie?api_key=${apikey}&query=${keyword}&language=en-US&page=${page}`);
   createCard(data);
 }
