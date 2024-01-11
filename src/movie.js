@@ -42,7 +42,8 @@ function cardHTML(movie) {
   return cardDiv;
 }
 
-function createGenreList(ele_id, genre_ids) {
+// 장르를 불러오는 함수를 사용하고싶어서 export했습니다.
+export function createGenreList(ele_id, genre_ids) {
   const genreName = genreList.filter((genre) => genre_ids.includes(genre.id));
   const genreListElement = document.getElementById(`${ele_id}`).querySelector(".genre");
 
