@@ -33,3 +33,26 @@ async function handleClickCard(event) {
 // 새로고침하더라도 없어지지 않는 방식을 구현해야함.
 // ui를 생성할 때 localstorage를 get한다..
 //
+
+// ----------------------------------------------------------------------------------
+/* 리뷰 함수 */
+
+const paintCard = document.getElementById("detailCommentReviewWrap");
+const userId = document.getElementById("detailReviewUserId");
+const userPwd = document.getElementById("detailReviewUserPwd");
+
+// 리뷰 보내는 함수
+function sendReview(e) {
+  e.preventDefault();
+
+  //리뷰 텍스트 값
+  const reviewValue = {
+    id: userId.value,
+    pwd: userPwd.value,
+    star: review
+  };
+}
+
+async function makeReview() {}
+
+// 입력한 정보를 가져와 추가하는 함수

@@ -9,44 +9,64 @@
     <title>detail page by</title>
   </head>
   <body>
-    <nav class="detail_nav">
-      <a href="#" class="detail_icon">1</a>
+    <nav id="movie_detail_nav">
+      <div class="detail_nav">
+        <a href="#" class="detail_icon">1</a>
+      </div>
+      <div class="detail_nav">
+        <a href="#icon" class="detail_icon">2</a>
+      </div>
     </nav>
-    <header class="detail_nav">
-      <a href="#icon" class="detail_icon">2</a>
-    </header>
 
     <!--nav로 태그를 할지 header로 태그를 할지-->
-    <div id="detailmain"></div>
-    <!--main할지 header할지-->
-    <main class="detail_main">
-      <div class="detail_bg">
-        <img src="#" alt="영화이미지" class="detail_bg_img" />
-      </div>
-    </main>
-    <section class="detail_section">
-      <h1 class="detail_movie_title">영화 제목</h1>
-      <div class="detail_movie_wrap_two">
-        <span class="detail_movie_wrap_time_genre">코미디</span>
-        <p class="detail_movie_wrap_year">2023</p>
-      </div>
-      <div class="detail_movie_over_view">
-        <p class="detail_movie_over_view_text">영화의 내용을 입력한다</p>
-      </div>
-      <button class="detail_movie_appreciate">감상하기</button>
-    </section>
-
+    <div id="moviePost">
+      <!-- <main class="detail_main">
+        <div class="detail_bg">
+          <img src="#" alt="영화이미지" class="detail_bg_img" />
+        </div>
+      </main>
+      <section class="detail_section">
+        <h1 class="detail_movie_title">영화 제목</h1>
+        <div class="detail_movie_wrap_two">
+          <span class="detail_movie_wrap_time_genre">코미디</span>
+          <p class="detail_movie_wrap_year">2023</p>
+        </div>
+        <div class="detail_movie_over_view">
+          <p class="detail_movie_over_view_text">영화의 내용을 입력한다</p>
+        </div>
+        <button class="detail_movie_appreciate">감상하기</button>
+      </section> -->
+    </div>
     <section class="detail_comment">
       <div class="detail_comment_title">영화 사용자 감상평</div>
+      <!--댓글 창 만들기-->
+      <form class="detail_comment_review_wrap" id="detailCommentReviewWrap">
+        <input type="text" class="detail_review_userId" id="detailReviewUserId" placeholder="아이디" />
+        <input type="password" class="detail_review_userPwd" id="detailReviewUserPwd" placeholder="비밀번호" />
+        <div class="detail_review_content">
+          <textarea class="detail_review_text" id="detailReviewContent" placeholder="영화 감상평을 남겨주세요.">
+          </textarea>
+          <select class="detail_review_star" id="detailReviewStar" required>
+            <option selected value="" placeholder="별점을 남겨주세요"></option>
+            <option value="⭐️">⭐️</option>
+            <option value="⭐️⭐️">⭐️⭐️</option>
+            <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+            <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+            <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+          </select>
+        </div>
+        <button type="button" id="detailReviewModifyBtn">수정</button>
+        <button type="submit" id="detailReviewSubmitBtn">저장</button>
+      </form>
       <ul class="detail_comment_wrap_list">
-        <!--여기에 댓글들이 있음-->
+        <!--댓글들 데이터 받아와서 붙이기-->
         <li>
           <div class="detail_comment_list_img">
             <img src="#list_img" alt="댓글다는 사용자 사진" />
             <div class="detail_comment_list_user">
-              <div class="detail_comment_list_user_id">사용자 id</div>
-              <div class="detail_comment_list_user_text">사용자가 쓴 내용</div>
-              <div class="detail_comment_list_user_score">사용자가 쓴 점수</div>
+              <div class="detail_comment_list_user_id" id="userId">사용자 id</div>
+              <div class="detail_comment_list_user_text" id="userInputComment">사용자가 쓴 내용</div>
+              <div class="detail_comment_list_user_star" id="userInputStar">사용자의 영화 점수</div>
             </div>
           </div>
         </li>
