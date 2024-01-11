@@ -14,7 +14,6 @@ export async function loadJSON(url) {
 export async function loadGenre() {
   const response = await loadJSON(`${urls}genre/movie/list?api_key=${apikey}&language=en`); // 중복되는 url을 변수로 지정하면 추후에 변할 때도 적용이 가능하기때문에
   genreList = response.genres;
-  console.log(genreList);
 }
 
 export async function loadPage(page) {
