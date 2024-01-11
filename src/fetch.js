@@ -19,7 +19,6 @@ export async function loadGenre() {
     return { ...genre, class: genre.name.toLowerCase().replace(" ", "") };
   });
   genreList = response.genres;
-
 }
 
 export async function loadPage(page) {
@@ -36,7 +35,7 @@ export async function moviePage(movie_id) {
 
 export async function searchPage(page, keyword) {
   const data = await loadJSON(
-    `${urls}search/movie?api_key=388873b1cb481f0c6145471233ca6035&query=${keyword}&include_adult=false&language=en-US&page=${page}`
+    `${urls}search/movie?api_key=${apikey}=${keyword}&include_adult=false&language=en-US&page=${page}`
   );
   createCard(data);
 }
