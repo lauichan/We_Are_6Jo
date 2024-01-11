@@ -7,6 +7,7 @@ ul,
 li {
   margin: 0;
   padding: 0;
+  position: sticky;
 }
 
 body {
@@ -117,4 +118,8 @@ body {
 #moviePost {
   display: flex;
   margin-top: 10px;
+}
+
+#movie_detail_nav {
+  display: flex;
 }
