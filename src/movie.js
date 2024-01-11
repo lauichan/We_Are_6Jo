@@ -12,7 +12,6 @@ export function createCard(response) {
 function cardHTML(movie) {
   const cardDiv = document.createElement("div");
   cardDiv.id = movie.id;
-
   const imgElement = document.createElement("img");
   imgElement.classList.add("poster");
   imgElement.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
@@ -43,7 +42,8 @@ function cardHTML(movie) {
   return cardDiv;
 }
 
-function createGenreList(ele_id, genre_ids) {
+// 장르를 불러오는 함수를 사용하고싶어서 export했습니다.
+export function createGenreList(ele_id, genre_ids) {
   const genreName = genreList.filter((genre) => genre_ids.includes(genre.id));
   const genreListElement = document.getElementById(`${ele_id}`).querySelector(".genre");
 
@@ -61,5 +61,27 @@ export function handleClickCard(event) {
   let target = event.target.matches("div") ? event.target : event.target.parentNode;
   alert(`영화 id: ${target.id}`);
   target.classList.toggle("click");
+  location.href = `detail.html?id=${target.id}`;
   console.log("click");
+}
+
+export async function loadPost(backdrop_path, title, release_date, genres, overview) {
+  let dataDown = `<main class="detail_main">
+  <div class="detail_bg">
+    <img src="https://image.tmdb.org/t/p/w500${backdrop_path}" alt="영화이미지" class="detail_bg_img"/>
+  </div>
+</main>
+<section class="detail_section">
+  <h1 class="detail_movie_title">${title}</h1>
+  <div class="detail_movie_wrap_two">
+    <span class="detail_movie_wrap_time_genre">${genres}</span>
+    <p class="detail_movie_wrap_year">${release_date}</p>
+  </div>
+  <div class="detail_movie_over_view">
+    <p class="detail_movie_over_view_text">${overview}</p>
+  </div>
+  <button class="detail_movie_appreciate">감상하기</button>
+</section>`;
+
+  await document.getElementById("moviePost").insertAdjacentHTML("beforeend", dataDown);
 }
