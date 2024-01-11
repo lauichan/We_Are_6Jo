@@ -37,6 +37,8 @@ async function handleClickCard(event) {
 // ----------------------------------------------------------------------------------
 /* 리뷰 등록 함수 */
 
-async function paintReview() {
+async function makeReview() {
   const paintCard = document.getElementById("detailCommentReviewWrap");
+  const userId = document.getElementById("detailReviewUserId");
+  const userPwd = document.getElementById("detailReviewUserPwd");
 }
