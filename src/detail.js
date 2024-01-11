@@ -21,6 +21,10 @@ console.log("생성체크용", load());
 //localStorage.removeItem('key');
 //localStorage.removeItem('username');
 
+async function handleClickCard(event) {
+  const cardList = document.getElementById("detail_section");
+}
+
 // click add
 
 // 리뷰창을 만듭니다. <innerHTML x>
@@ -39,17 +43,16 @@ const userId = document.getElementById("detailReviewUserId");
 const userPwd = document.getElementById("detailReviewUserPwd");
 const userStar = document.getElementById("detailReviewStar");
 const submitBtn = document.getElementById("detailReviewSubmitBtn");
+const userText = document.getElementById("detailReviewContent");
+// 리뷰글들을 배열로 받자
 
 let reviewStorage = [];
 
 // 리뷰 저장하기
 function savedReview() {
-  localStorage.setItem("review", JSON.stringify(reviewStorage));
-  console.log(reviewStorage.length);
+  localStorage.setItem("review", JSON.parse(reviewStorage));
+  // console.log(reviewStorage.length);
 }
-
-// 저장버튼을 클릭하면 리뷰 데이터가 로컬스토리지에 저장한다.
-submitBtn.addEventListener("click", savedReview);
 
 // 리뷰 보내기
 function sendReview(e) {
@@ -59,41 +62,51 @@ function sendReview(e) {
   const reviewValue = {
     id: userId.value,
     pwd: userPwd.value,
+    comment: userText.value,
     star: userStar.value
   };
 
   // 스토리지에 추가
-  reviewStorage.push(reviewValue);
+  reviewStorage.push(reviewValue.id, reviewValue.pwd, reviewValue.comment, reviewValue.star);
+
+  // 그러면 그대로 냄둘까요.... 그건 아닌데
+  paintCard.reset();
 
   // 로컬 스토리지에 저장
   savedReview();
 }
 
-function getComments() {
-  let comments = localStorage.getItem();
-
-  if (comments) {
-    return JSON.parse(comments);
-  } else {
-    return [];
-  }
-}
-
-function loadComments() {
-  let comments = getComments();
-
-  for (let i = 0; i < comments.length; i++) {
-    let comment = comments[i];
-
-    // let listItem = document.createElement('li');
-    // listItem.innerHTML =
-    //   '<strong>' + comment.user + ':</strong> ' + comment.review;
-
-    // commentList.appendChild(listItem);
-    console.log(comment);
-  }
-}
-
-loadComments();
-
 submitBtn.addEventListener("click", sendReview);
+
+//리뷰가 저장되니  리뷰 데이터를 블러오자
+
+let getData = localStorage.getItem("review");
+
+let array = [];
+
+if (getData) {
+  array = getData.split(",");
+  console.log(array);
+} else {
+  console.log(`getData에 값이 없어`);
+}
+
+for (let i = 0; i < array.length; i++) {
+  document.getElementById("detailWrapList").innerHTML += `
+   <li>
+   <div class="detail_comment_list_img">
+     <img src="#" alt = "" />
+     <div class="detail_comment_list_user">
+       <div class="detail_comment_list_user_id" id="userId">${array[i]}</div>
+       <div class="detail_comment_list_user_text" id="userInputComment">
+       ${array[i + 2]}   
+       </div>
+       <div class="detail_comment_list_user_star" id="userInputStar">${array[i + 3]}</div>
+     </div>
+   </div>
+ </li>
+   
+   
+   
+   `;
+}
