@@ -1,15 +1,14 @@
 // 검색 페이지 파일
-import { searchPage, loadGenre, genreList } from "./fetch.js";
+import { searchPage, loadGenre } from "./fetch.js";
 import { handleClickCard } from "./movie.js";
 
 let currentPage = 1;
 
-console.log(location.search);
 const keyword = new URL(location.href).searchParams.get("query");
 console.log(keyword);
 
 async function load() {
-  loadGenre();
+  await loadGenre();
   searchPage(currentPage, keyword);
 }
 
