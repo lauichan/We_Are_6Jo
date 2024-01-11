@@ -50,7 +50,7 @@ let reviewStorage = [];
 
 // 리뷰 저장하기
 function savedReview() {
-  localStorage.setItem("review", JSON.parse(reviewStorage));
+  localStorage.setItem("review", JSON.stringify(reviewStorage));
   // console.log(reviewStorage.length);
 }
 
@@ -89,24 +89,4 @@ if (getData) {
   console.log(array);
 } else {
   console.log(`getData에 값이 없어`);
-}
-
-for (let i = 0; i < array.length; i++) {
-  document.getElementById("detailWrapList").innerHTML += `
-   <li>
-   <div class="detail_comment_list_img">
-     <img src="#" alt = "" />
-     <div class="detail_comment_list_user">
-       <div class="detail_comment_list_user_id" id="userId">${array[i]}</div>
-       <div class="detail_comment_list_user_text" id="userInputComment">
-       ${array[i + 2]}   
-       </div>
-       <div class="detail_comment_list_user_star" id="userInputStar">${array[i + 3]}</div>
-     </div>
-   </div>
- </li>
-   
-   
-   
-   `;
 }
