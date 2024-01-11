@@ -21,10 +21,6 @@ console.log("생성체크용", load());
 //localStorage.removeItem('key');
 //localStorage.removeItem('username');
 
-async function handleClickCard(event) {
-  const cardList = document.getElementById("detail_section");
-}
-
 // click add
 
 // 리뷰창을 만듭니다. <innerHTML x>
@@ -40,6 +36,9 @@ async function handleClickCard(event) {
 const paintCard = document.getElementById("detailCommentReviewWrap");
 const userId = document.getElementById("detailReviewUserId");
 const userPwd = document.getElementById("detailReviewUserPwd");
+const userReview = document.getElementById("detailReviewContent");
+const starPoint = document.getElementById("detailReviewStar");
+const submitBtn = document;
 
 // 리뷰 보내는 함수
 function sendReview(e) {
@@ -49,9 +48,33 @@ function sendReview(e) {
   const reviewValue = {
     id: userId.value,
     pwd: userPwd.value,
-    star: review
+    content: userReview.value,
+    starPoint: star.value
   };
+
+  // window.localStorage.setItem
 }
+// async function loadReview(){
+//   const querySnapshot = await getItem(userId){
+
+//     querySnapshot.forEach(window.localStorage)
+
+//     `<li>
+//       <div class="detail_comment_list_img">
+//         <img src="#list_img" alt="댓글다는 사용자 사진" />
+//         <div class="detail_comment_list_user">
+//           <div class="detail_comment_list_user_id" id="userId">사용자 id</div>
+//           <div class="detail_comment_list_user_text" id="userInputComment">사용자가 쓴 내용</div>
+//           <div class="detail_comment_list_user_star" id="userInputStar">사용자의 영화 점수</div>
+//         </div>
+//       </div>
+//     </li>`
+
+//   }
+
+// }
+
+const comment1 = new ReviewValue(getItem);
 
 async function makeReview() {}
 
