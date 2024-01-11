@@ -21,10 +21,6 @@ console.log("생성체크용", load());
 //localStorage.removeItem('key');
 //localStorage.removeItem('username');
 
-async function handleClickCard(event) {
-  const cardList = document.getElementById("detail_section");
-}
-
 // click add
 
 // 리뷰창을 만듭니다. <innerHTML x>
