@@ -1,5 +1,5 @@
 // 검색 페이지 파일
-import { searchPage, loadGenre } from "./fetch.js";
+import { searchPage, loadGenre, genreList } from "./fetch.js";
 import { handleClickCard } from "./movie.js";
 
 let currentPage = 1;
@@ -19,13 +19,13 @@ function morePage() {
 }
 
 function search(event) {
-  event.preventDefault;
-  onsole.log(this.value);
-  //location.href(`search.html?query=${this.value}`);
+  event.preventDefault();
+  const value = document.getElementById("searchInput").value;
+  location.href = `search.html?query=${value}`;
 }
 
 load();
 document.getElementById("searchInput").focus();
 document.getElementById("morePage").addEventListener("click", morePage);
 document.getElementById("movies").addEventListener("click", handleClickCard);
-document.getElementById("searchBtn").addEventListener("submit", search);
+document.getElementById("search").addEventListener("submit", search);
