@@ -39,10 +39,27 @@
     </div>
     <section class="detail_comment">
       <div class="detail_comment_title">영화 사용자 감상평</div>
-      <!--모음-->
-
+      <!--댓글 창 만들기-->
+      <form class="detail_comment_review_wrap" id="detailCommentReviewWrap">
+        <input type="text" class="detail_review_userId" id="detailReviewUserId" placeholder="아이디" />
+        <input type="password" class="detail_review_userPwd" id="detailReviewUserPwd" placeholder="비밀번호" />
+        <div class="detail_review_content">
+          <textarea class="detail_review_text" id="detailReviewContent" placeholder="영화 감상평을 남겨주세요.">
+          </textarea>
+          <select class="detail_review_star" id="detailReviewStar" required>
+            <option selected value="" placeholder="별점을 남겨주세요"></option>
+            <option value="⭐️">⭐️</option>
+            <option value="⭐️⭐️">⭐️⭐️</option>
+            <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+            <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+            <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+          </select>
+        </div>
+        <button type="button" id="detailReviewModifyBtn">수정</button>
+        <button type="submit" id="detailReviewSubmitBtn">저장</button>
+      </form>
       <ul class="detail_comment_wrap_list">
-        <!--댓글들 불러와서 붙이기-->
+        <!--댓글들 데이터 받아와서 붙이기-->
         <li>
           <div class="detail_comment_list_img">
             <img src="#list_img" alt="댓글다는 사용자 사진" />
@@ -55,19 +72,5 @@
         </li>
       </ul>
     </section>
-    <!--댓글 창 만들기-->
-    <form class="detail_comment_review_wrap" id="detailCommentReviewWrap">
-      <input type="text" class="detail_review_userId" id="detailReviewUserId" placeholder="아이디" />
-      <input type="password" class="detail_review_userPwd" id="detailReviewUserPwd" placeholder="비밀번호" />
-      <div class="detail_review_content">
-        <textarea
-          class="detail_review_text"
-          id="detailReviewContent"
-          placeholder="영화 감상평을 남겨주세요."
-        ></textarea>
-      </div>
-      <button type="button" id="detailReviewModifyBtn">수정</button>
-      <button type="submit" id="detailReviewSubmitBtn">저장</button>
-    </form>
   </body>
 </html>
