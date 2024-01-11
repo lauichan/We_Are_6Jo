@@ -40,8 +40,17 @@ async function handleClickCard(event) {
 const paintCard = document.getElementById("detailCommentReviewWrap");
 const userId = document.getElementById("detailReviewUserId");
 const userPwd = document.getElementById("detailReviewUserPwd");
+const userStar = document.getElementById("userInputStar");
 
-// 리뷰 보내는 함수
+let reviewStorage = [];
+
+// 리뷰 저장하기
+function savedReview() {
+  localStorage.setItem("review", JSON.stringify(reviewStorage));
+  console.log(reviewStorage.length);
+}
+
+// 리뷰 보내기
 function sendReview(e) {
   e.preventDefault();
 
@@ -49,10 +58,11 @@ function sendReview(e) {
   const reviewValue = {
     id: userId.value,
     pwd: userPwd.value,
-    star: review
+    star: userStar.value
   };
+  // 스토리지에 추가
+  reviewStorage.push(reviewValue);
+
+  // 로컬 스토리지에 저장
+  savedReview();
 }
-
-async function makeReview() {}
-
-// 입력한 정보를 가져와 추가하는 함수
