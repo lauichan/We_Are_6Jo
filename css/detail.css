@@ -37,6 +37,7 @@ body {
 .detail_bg_img {
   width: 500px;
   height: 500px;
+  border-radius: 12px;
 }
 
 .detail_movie_title {
@@ -45,7 +46,6 @@ body {
 }
 
 .detail_movie_wrap_two {
-  margin-bottom: 10px;
   display: flex;
 }
 
@@ -95,10 +95,14 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  border-radius: 5%;
 }
 
 .detail_comment_list_img img {
   border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background-color: #007bff;
   margin-right: 10px;
 }
 
@@ -122,4 +126,45 @@ body {
 
 #movie_detail_nav {
   display: flex;
+  position: sticky;
+  top: 0px;
+  top: 0;
+  /* width: 100% */
+  left: 0;
+  right: 0;
+}
+
+.detail_movie_wrap_two {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  align-items: center;
+  display: flex;
+}
+
+/* Styles for the unordered list with class "genre" */
+.genre {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.genre > .crime,
+.genre > .drama {
+  padding: 10px;
+}
+
+/* Styles for the paragraph with class "detail_movie_wrap_year" */
+.detail_movie_wrap_year {
+  color: #333;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-left: 00px;
+}
+
+.detail_comment_list_user_id,
+.detail_comment_list_user_text,
+.detail_comment_list_user_score {
+  padding-left: 40px;
+  padding-top: 10px;
 }
