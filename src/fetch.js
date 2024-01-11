@@ -1,4 +1,4 @@
-import { createCard } from "./movie.js";
+import { createCard, loadPost } from "./movie.js";
 import { apikey } from "./apikeys.js";
 
 let urls = "https://api.themoviedb.org/3/";
@@ -26,6 +26,7 @@ export async function loadPage(page) {
 export async function moviePage(movie_id) {
   const data = await loadJSON(`${urls}movie/${movie_id}?api_key=${apikey}&language=en`);
   console.log(data); //별도의 영화 id를 추가해서 정보를 빼려고 준비중입니다.
+  loadPost(data);
 }
 
 export async function searchPage(page, keyword) {
