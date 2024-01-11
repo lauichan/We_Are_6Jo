@@ -1,22 +1,31 @@
 // 검색 페이지 파일
-import { loadSearchPage, loadGenre } from "./fetch.js";
+import { searchPage, loadGenre } from "./fetch.js";
 import { handleClickCard } from "./movie.js";
 
 let currentPage = 1;
 
-let keyword = "spider";
+console.log(location.search);
+const keyword = new URL(location.href).searchParams.get("query");
+console.log(keyword);
 
 async function load() {
-  await loadGenre();
-  loadSearchPage(currentPage, keyword);
+  loadGenre();
+  searchPage(currentPage, keyword);
 }
 
 function morePage() {
   currentPage++;
-  loadSearchPage(currentPage, keyword);
+  searchPage(currentPage, keyword);
+}
+
+function search(event) {
+  event.preventDefault;
+  onsole.log(this.value);
+  //location.href(`search.html?query=${this.value}`);
 }
 
 load();
 document.getElementById("searchInput").focus();
 document.getElementById("morePage").addEventListener("click", morePage);
 document.getElementById("movies").addEventListener("click", handleClickCard);
+document.getElementById("searchBtn").addEventListener("submit", search);

@@ -12,7 +12,6 @@ export async function loadJSON(url) {
 export async function loadGenre() {
   const response = await loadJSON(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apikey}&language=en`);
   genreList = response.genres;
-  console.log(genreList);
 }
 
 export async function loadPage(page) {
@@ -22,7 +21,7 @@ export async function loadPage(page) {
   createCard(data);
 }
 
-export async function loadSearchPage(page, keyword) {
+export async function searchPage(page, keyword) {
   const data = await loadJSON(
     `https://api.themoviedb.org/3/search/movie?api_key=${apikey}&query=${keyword}&include_adult=false&language=en-US&page=${page}`
   );
