@@ -34,13 +34,15 @@ async function handleClickCard(event) {
 // ui를 생성할 때 localstorage를 get한다..
 //
 
-// ----------------------------------------------------------------------------------
-/* 리뷰 함수 */
+// ----------------------------------------------------------------------------------//
+// 리뷰 함수
 
+// 위치 ?.?
 const paintCard = document.getElementById("detailCommentReviewWrap");
 const userId = document.getElementById("detailReviewUserId");
 const userPwd = document.getElementById("detailReviewUserPwd");
 const userStar = document.getElementById("userInputStar");
+const submitBtn = document.getElementById("detailReviewSubmitBtn");
 
 let reviewStorage = [];
 
@@ -60,9 +62,12 @@ function sendReview(e) {
     pwd: userPwd.value,
     star: userStar.value
   };
+  console.log(id, pwd, star);
   // 스토리지에 추가
   reviewStorage.push(reviewValue);
 
   // 로컬 스토리지에 저장
   savedReview();
 }
+
+submitBtn.addEventListener("click", sendReview);
