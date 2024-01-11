@@ -1,7 +1,14 @@
-import { loadPage, loadGenre } from "./fetch.js";
+import { moviePage, loadGenre } from "./fetch.js";
 import { handleClickCard } from "./movie.js";
 
-let a = 123;
+const id = new URL(location.href).searchParams.get("id");
+console.log(id);
 
-// 리뷰창을 만듭니다. <innerHTML>
-// insertAdjacentHTML
+async function load() {
+  await loadGenre();
+  return moviePage(id);
+}
+
+load();
+document.getElementById("searchInput").focus();
+document.getElementById("movies").addEventListener("click", handleClickCard);
