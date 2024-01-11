@@ -10,9 +10,16 @@ export function createCard(response) {
 }
 
 function renderCardHTML(movie) {
+  let src = "";
+  if (movie.poster_path) {
+    src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+  } else {
+    src = "images/noimage.jpg";
+  }
+
   return `
   <div id="${movie.id}">
-    <img class="poster" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" title="${movie.id}"/>
+    <img class="poster" src="${src}" alt="${movie.title}"/>
     <h2 class="title">${movie.title}</h2>
     <p class="overview">${movie.overview}</p>
     <ul class="genre"></ul>
