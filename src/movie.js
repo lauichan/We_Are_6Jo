@@ -61,5 +61,6 @@ export function handleClickCard(event) {
   let target = event.target.matches("div") ? event.target : event.target.parentNode;
   alert(`영화 id: ${target.id}`);
   target.classList.toggle("click");
+  location.href = `detail.html?id=${target.id}`;
   console.log("click");
 }

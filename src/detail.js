@@ -1,16 +1,17 @@
 import { moviePage, loadGenre } from "./fetch.js";
-import { createGenreList } from "./movie.js";
-let movieId;
 
-async function moviePost() {
-  await moviePage();
-  moviePage(movieId, currentPage);
-}
+const id = new URL(location.href).searchParams.get("id");
 
-async function createGenreList() {
+console.log(id);
+
+async function load() {
   await loadGenre();
-  moviePage(currentPage, keyword);
+  return moviePage(id);
 }
+
+load();
+
+// document.getElementById("movies").addEventListener("click", handleClickCard);
 
 async function loadPost(backdrop_path, title, genres, overview) {
   return `<main class="detail_main" id="moviePost";>

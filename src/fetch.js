@@ -26,7 +26,7 @@ export async function loadPage(page) {
 }
 
 export async function moviePage(movie_id) {
-  const data = await loadJSON(`${urls}movie/${movie_id}?api_key=${apiKey}&language=en&page=${page}`);
+  const data = await loadJSON(`${urls}movie/${movie_id}?api_key=${apiKey}&language=en`);
   console.log(data); //별도의 영화 id를 추가해서 정보를 빼려고 준비중입니다.
 }
 
