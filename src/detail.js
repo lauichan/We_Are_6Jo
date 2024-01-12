@@ -33,7 +33,7 @@ function sendReview(e) {
   window.localStorage.setItem(id, JSON.stringify(ReviewList));
 
   alert("리뷰가 작성되었습니다.");
-
+  form.reset();
   loadReview();
 }
 form.addEventListener("submit", sendReview);
