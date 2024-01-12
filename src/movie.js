@@ -12,7 +12,7 @@ export function createCard(response) {
 function renderCardHTML(movie) {
   let src = "";
   if (movie.poster_path) {
-    src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+    src = `https://image.tmdb.org/t/p/w300${movie.backdrop_path}`;
   } else {
     src = "images/noimage.jpg";
   }
