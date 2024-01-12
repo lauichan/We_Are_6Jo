@@ -8,11 +8,6 @@ async function load() {
   return moviePage(id);
 }
 
-async function loadAndDisplay() {
-  // 리뷰 표시
-  loadReview();
-}
-
 console.log("생성체크용", load());
 
 // const paintCard = document.getElementById("detailCommentReviewWrap");
@@ -86,4 +81,4 @@ function loadReview() {
 }
 
 // 페이지 로드시에 loadAndDisplay 함수 호출
-window.addEventListener("load", loadAndDisplay);
+window.addEventListener("load", loadReview);
