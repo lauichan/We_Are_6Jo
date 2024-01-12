@@ -60,18 +60,15 @@ function userReviewInfo() {
 function loadReview() {
   const guestReview = document.getElementById("movieReview");
 
-  // 기존 리뷰를 지웁니다
   guestReview.innerHTML = "";
 
-  // 로컬 스토리지에서 리뷰를 가져옵니다
   const xReviewList = JSON.parse(window.localStorage.getItem("reviewList")) || {};
 
-  // 스토리지의 각 리뷰에 대해 반복합니다
   Object.values(xReviewList).forEach((userReview) => {
     const entryHtml = `
         <li>
           <div class="detail_comment_list_img">
-            <img src="${userReview.profile}" alt="댓글다는 사용자 사진" />
+            <img src="${userReview.profile}" alt="user 사진" />
             <div class="detail_comment_list_user">
               <div class="detail_comment_list_user_id" id="userId">${userReview.userName}</div>
               <div class="detail_comment_list_user_text" id="userInputComment">${userReview.content}</div>
@@ -80,7 +77,6 @@ function loadReview() {
           </div>
         </li>`;
 
-    // HTML을 guestReview 엘리먼트에 추가합니다
     guestReview.insertAdjacentHTML("beforeend", entryHtml);
   });
 }
