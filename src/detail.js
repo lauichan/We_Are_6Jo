@@ -29,7 +29,11 @@ function sendReview(e) {
   }
   ReviewList[userKey] = userReviewInfo();
   // 사용자 리뷰 내용 저장
+
   window.localStorage.setItem(id, JSON.stringify(ReviewList));
+
+  alert("리뷰가 작성되었습니다.");
+
   loadReview();
 }
 form.addEventListener("submit", sendReview);
@@ -46,6 +50,11 @@ function userReviewInfo() {
 function loadReview() {
   const guestReview = document.getElementById("movieReview");
   guestReview.innerHTML = "";
+  userText.focus();
+
+  if (userText.value == "") {
+    alert("검색어를 입력하세요");
+  }
 
   const ReviewList = JSON.parse(window.localStorage.getItem(id)) || {};
   Object.entries(ReviewList).forEach(([reviewId, review]) => {
@@ -75,6 +84,7 @@ function deleteReview() {
 
   window.localStorage.setItem(id, JSON.stringify(ReviewList));
 
+  alert("삭제되었습니다.");
   loadReview();
 
   if (Object.keys(ReviewList).length === 0) {
