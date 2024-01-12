@@ -1,4 +1,4 @@
-import { createCard, loadPost } from "./movie.js";
+import { createCard, loadPost, checkLastPage } from "./movie.js";
 import { apikey } from "./apikeys.js";
 
 let urls = "https://api.themoviedb.org/3/";
@@ -22,6 +22,7 @@ export async function loadGenre() {
 export async function loadPage(page) {
   const data = await loadJSON(`${urls}movie/top_rated?api_key=${apikey}&language=en&page=${page}`);
   createCard(data);
+  checkLastPage(data.results.length);
 }
 
 export async function moviePage(movie_id) {
@@ -31,8 +32,7 @@ export async function moviePage(movie_id) {
 }
 
 export async function searchPage(page, keyword) {
-  const data = await loadJSON(
-    `${urls}search/movie?api_key=388873b1cb481f0c6145471233ca6035&query=${keyword}&include_adult=false&language=en-US&page=${page}`
-  );
+  const data = await loadJSON(`${urls}search/movie?api_key=${apikey}&query=${keyword}&language=en-US&page=${page}`);
   createCard(data);
+  checkLastPage(data.results.length);
 }
