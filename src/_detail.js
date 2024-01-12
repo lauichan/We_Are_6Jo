@@ -19,7 +19,7 @@ const userText = document.getElementById("detailReviewContent");
 
 // let reviewStorage = [];
 
-console.log("ddddd");
+// console.log("ddddd");
 
 function sendReview(e) {
   e.preventDefault();
@@ -63,7 +63,7 @@ function loadReview() {
   //   guestReview = "";
 
   const ReviewList = JSON.parse(window.localStorage.getItem(id)) || {};
-  console.log(ReviewList);
+  // console.log(ReviewList);
   Object.values(ReviewList).forEach((userReview) => {
     const entryHtml = `
     <li id=>
@@ -71,7 +71,6 @@ function loadReview() {
         <div class="detail_comment_list_user">
           <div class="detail_comment_list_user_id" id="userId">${userReview.userName}</div>
           <div class="detail_comment_list_user_text" id="userInputComment">${userReview.content}</div>
-          <button type="button" id="deleteBtn">삭제버튼</button>
           <div class="detail_comment_list_user_star" id="userInputStar">${userReview.star}</div>
         </div>
         <button id="deleteReview">삭제</button>
@@ -81,9 +80,24 @@ function loadReview() {
     guestReview.insertAdjacentHTML("beforeend", entryHtml);
   });
 }
+function search(id) {
+  let keys = Object.keys(localStorage);
+  let setItem = [];
+
+  for (let i = 0; i < keys.length; i++) {
+    let key = keys[i];
+    if (key.includes(id)) {
+      let value = localStorage[key];
+      setItem.push(value);
+    }
+  }
+  return setItem;
+}
+
+let result = search(id);
+console.log(result);
 
 function deleteReview() {
-  console.log("가나다라");
   window.localStorage.getItem(id.userKey);
   console.log("키", window.localStorage.getItem(id.userKey));
   loadReview();
