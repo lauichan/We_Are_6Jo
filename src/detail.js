@@ -52,10 +52,6 @@ function loadReview() {
   guestReview.innerHTML = "";
   userText.focus();
 
-  if (userText.value == "") {
-    alert("검색어를 입력하세요");
-  }
-
   const ReviewList = JSON.parse(window.localStorage.getItem(id)) || {};
   Object.entries(ReviewList).forEach(([reviewId, review]) => {
     const entryHtml = `
