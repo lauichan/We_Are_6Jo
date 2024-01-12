@@ -15,14 +15,14 @@ async function loadAndDisplay() {
 
 console.log("생성체크용", load());
 
-const paintCard = document.getElementById("detailCommentReviewWrap");
+// const paintCard = document.getElementById("detailCommentReviewWrap");
 const userId = document.getElementById("detailReviewUserId");
 const userPwd = document.getElementById("detailReviewUserPwd");
 const userStar = document.getElementById("detailReviewStar");
 const submitBtn = document.getElementById("detailReviewSubmitBtn");
 const userText = document.getElementById("detailReviewContent");
 
-let reviewStorage = [];
+// let reviewStorage = [];
 
 console.log("ddddd");
 
@@ -30,23 +30,23 @@ function sendReview(e) {
   e.preventDefault();
 
   // 리뷰키 유무 확인
-  let xReviewList = {};
+  let ReviewList = {};
 
   if (window.localStorage.getItem(id) !== null) {
-    xReviewList = JSON.parse(window.localStorage.getItem(id));
+    ReviewList = JSON.parse(window.localStorage.getItem(id));
   }
 
   // 리뷰키 사용자키 유무 확인
   let userKey = "ID_" + userId.value;
-  console.log(userKey);
-  if (!xReviewList.hasOwnProperty(userKey)) {
-    xReviewList[userKey] = {};
+
+  if (!ReviewList.hasOwnProperty(userKey)) {
+    ReviewList[userKey] = {};
   }
 
-  xReviewList[userKey] = userReviewInfo();
+  ReviewList[userKey] = userReviewInfo();
 
   // 사용자 리뷰 내용 저장
-  window.localStorage.setItem(id, JSON.stringify(xReviewList));
+  window.localStorage.setItem(id, JSON.stringify(ReviewList));
 
   loadReview();
 }
@@ -67,9 +67,9 @@ function loadReview() {
   guestReview.innerHTML = "";
   //   guestReview = "";
 
-  const xReviewList = JSON.parse(window.localStorage.getItem(id)) || {};
+  const ReviewList = JSON.parse(window.localStorage.getItem(id)) || {};
 
-  Object.values(xReviewList).forEach((userReview) => {
+  Object.values(ReviewList).forEach((userReview) => {
     const entryHtml = `
     <li>
       <div class="detail_comment_list_img">
