@@ -48,13 +48,6 @@ const userText = document.getElementById("detailReviewContent");
 
 let reviewStorage = [];
 
-// 리뷰 저장하기
-function savedReview() {
-  localStorage.setItem("review", JSON.stringify(reviewStorage));
-  // console.log(reviewStorage.length);
-}
-
-// 리뷰 보내기
 function sendReview(e) {
   e.preventDefault();
 
@@ -73,20 +66,35 @@ function sendReview(e) {
   paintCard.reset();
 
   // 로컬 스토리지에 저장
-  savedReview();
+  localStorage.setItem("review", JSON.stringify(reviewStorage));
 }
 
 submitBtn.addEventListener("click", sendReview);
 
-//리뷰가 저장되니  리뷰 데이터를 블러오자
-
 let getData = localStorage.getItem("review");
+console.log(getData, typeof getData);
 
 let array = [];
-
 if (getData) {
   array = getData.split(",");
-  console.log(array);
 } else {
-  console.log(`getData에 값이 없어`);
+  //  console.log(`getData에 값이 없어`);
 }
+
+// console.log(array);
+
+document.getElementById("movieReview").innerHTML += `
+           <li>
+           <div class="detail_comment_list_img">
+             <img src="#list_img" alt="댓글다는 사용자 사진" />
+             <div class="detail_comment_list_user">
+               <div class="detail_comment_list_user_id" id="userId"></div>
+               <div class="detail_comment_list_user_text" id="userInputComment">
+                   
+               </div>
+               <div class="detail_comment_list_user_star" id="userInputStar"></div>
+             </div>
+           </div>
+         </li>
+
+   `;
