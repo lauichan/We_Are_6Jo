@@ -66,11 +66,12 @@ function loadReview() {
 
   Object.values(ReviewList).forEach((userReview) => {
     const entryHtml = `
-    <li>
+    <li id ="${userKey}">
       <div class="detail_comment_list_img">
         <div class="detail_comment_list_user">
           <div class="detail_comment_list_user_id" id="userId">${userReview.userName}</div>
           <div class="detail_comment_list_user_text" id="userInputComment">${userReview.content}</div>
+          <button type="button" id="deleteBtn">삭제버튼</button>
           <div class="detail_comment_list_user_star" id="userInputStar">${userReview.star}</div>
         </div>
       </div>
