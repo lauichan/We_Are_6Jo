@@ -33,7 +33,7 @@ function sendReview(e) {
 
   // 리뷰키 사용자키 유무 확인
   let userKey = "ID_" + userId.value;
-
+  console.log(userKey);
   if (!ReviewList.hasOwnProperty(userKey)) {
     ReviewList[userKey] = {};
   }
@@ -71,10 +71,10 @@ function loadReview() {
         <div class="detail_comment_list_user">
           <div class="detail_comment_list_user_id" id="userId">${userReview.userName}</div>
           <div class="detail_comment_list_user_text" id="userInputComment">${userReview.content}</div>
-          <button type="button" id="deleteBtn">삭제버튼</button>
+          
           <div class="detail_comment_list_user_star" id="userInputStar">${userReview.star}</div>
         </div>
-        <button id="deleteReview">삭제</button>
+        <button id="deleteReview" >삭제</button>
       </div>
     </li>`;
 
