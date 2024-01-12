@@ -1,3 +1,107 @@
 * {
   box-sizing: border-box;
 }
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: black;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #141517;
+  height: 50px;
+  padding: 0 20px;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+main {
+  padding: 0 20px;
+}
+
+#movies {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.8rem;
+  row-gap: 2rem;
+  margin: 2rem 0;
+  justify-content: center;
+}
+
+#movies > div {
+  max-width: 300px;
+  position: relative;
+  flex-grow: 1;
+}
+
+#movies > div:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+#movies > div img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* 지연 */
+#movies > div:hover .over {
+  display: block;
+}
+
+#movies > div .over {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  display: none;
+  width: 100%;
+}
+
+#movies > div .title {
+  font-weight: bold;
+}
+
+.pagination {
+  width: 100%;
+  padding: 0.5rem 0;
+  font-size: 100%;
+  border: 1px solid white;
+  margin: 0.5rem 0;
+  border-radius: 6px;
+  background-color: black;
+  color: white;
+}
+
+footer {
+  margin: 2rem 0;
+  color: #84868d;
+  font-size: 80%;
+}
+
+/* 디테일 */
+.detail_movie_title {
+  font-weight: bold;
+  font-size: 2rem;
+}
