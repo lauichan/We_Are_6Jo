@@ -32,8 +32,8 @@ function sendReview(e) {
   // 리뷰키 유무 확인
   let xReviewList = {};
 
-  if (window.localStorage.getItem("reviewList") !== null) {
-    xReviewList = JSON.parse(window.localStorage.getItem("reviewList"));
+  if (window.localStorage.getItem(id) !== null) {
+    xReviewList = JSON.parse(window.localStorage.getItem(id));
   }
 
   // 리뷰키 사용자키 유무 확인
@@ -46,9 +46,9 @@ function sendReview(e) {
   xReviewList[userKey] = userReviewInfo();
 
   // 사용자 리뷰 내용 저장
-  window.localStorage.setItem("reviewList", JSON.stringify(xReviewList));
+  window.localStorage.setItem(id, JSON.stringify(xReviewList));
 
-  //   loadReview();
+  loadReview();
 }
 submitBtn.addEventListener("click", sendReview);
 
@@ -64,10 +64,10 @@ function userReviewInfo() {
 function loadReview() {
   const guestReview = document.getElementById("movieReview");
 
-  //   guestReview.innerHTML = "";
+  guestReview.innerHTML = "";
   //   guestReview = "";
 
-  const xReviewList = JSON.parse(window.localStorage.getItem("reviewList")) || {};
+  const xReviewList = JSON.parse(window.localStorage.getItem(id)) || {};
 
   Object.values(xReviewList).forEach((userReview) => {
     const entryHtml = `
