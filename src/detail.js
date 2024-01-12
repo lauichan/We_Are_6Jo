@@ -8,7 +8,7 @@ async function load() {
   return moviePage(id);
 }
 
-console.log("생성체크용", load());
+load();
 
 // const paintCard = document.getElementById("detailCommentReviewWrap");
 const userId = document.getElementById("detailReviewUserId");
@@ -16,10 +16,6 @@ const userPwd = document.getElementById("detailReviewUserPwd");
 const userStar = document.getElementById("detailReviewStar");
 const submitBtn = document.getElementById("detailReviewSubmitBtn");
 const userText = document.getElementById("detailReviewContent");
-
-// let reviewStorage = [];
-
-console.log("ddddd");
 
 function sendReview(e) {
   e.preventDefault();
@@ -58,37 +54,33 @@ function userReviewInfo() {
 
 function loadReview() {
   const guestReview = document.getElementById("movieReview");
-
   guestReview.innerHTML = "";
-  //   guestReview = "";
 
   const ReviewList = JSON.parse(window.localStorage.getItem(id)) || {};
-  console.log(ReviewList);
-  Object.values(ReviewList).forEach((userReview) => {
+  Object.entries(ReviewList).forEach(([reviewId, review]) => {
     const entryHtml = `
-    <li id=>
+    <li id=${reviewId}>
       <div class="detail_comment_list_img">
         <div class="detail_comment_list_user">
-          <div class="detail_comment_list_user_id" id="userId">${userReview.userName}</div>
-          <div class="detail_comment_list_user_text" id="userInputComment">${userReview.content}</div>
-          
-          <div class="detail_comment_list_user_star" id="userInputStar">${userReview.star}</div>
+
+          <div class="detail_comment_list_user_id" id="userId">${review.userName}</div>
+          <div class="detail_comment_list_user_text" id="userInputComment">${review.content}</div>
+          <div class="detail_comment_list_user_star" id="userInputStar">${review.star}</div>
+
         </div>
         <button id="deleteReview" >삭제</button>
       </div>
     </li>`;
-
     guestReview.insertAdjacentHTML("beforeend", entryHtml);
   });
+  document.querySelectorAll("#deleteReview").forEach((button) => button.addEventListener("click", deleteReview));
 }
 
 function deleteReview() {
-  console.log("가나다라");
-  window.localStorage.getItem(id.userKey);
-  console.log("키", window.localStorage.getItem(id.userKey));
+  let reviewId = this.closest("li").id;
+  console.log(reviewId);
   loadReview();
 }
 
 // 페이지 로드시에 loadAndDisplay 함수 호출
 window.addEventListener("load", loadReview);
-document.getElementById("deleteReview").addEventListener("click", deleteReview);
