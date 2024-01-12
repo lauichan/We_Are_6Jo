@@ -76,8 +76,16 @@ function loadReview() {
 
 function deleteReview() {
   let reviewId = this.closest("li").id;
-  console.log(reviewId);
+  let ReviewList = JSON.parse(window.localStorage.getItem(id));
+
+  delete ReviewList[reviewId];
+
+  window.localStorage.setItem(id, JSON.stringify(ReviewList));
   loadReview();
+
+  if (Object.keys(ReviewList).length === 0) {
+    window.localStorage.removeItem(id);
+  }
 }
 
 // 페이지 로드시에 loadAndDisplay 함수 호출
