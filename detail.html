@@ -4,19 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>detail page by</title>
-    <link rel="stylesheet" href="css/detail.css" />
+    <link rel="stylesheet" href="css/reset.css" />
     <script type="module" src="src/detail.js"></script>
     <title>detail page by</title>
   </head>
   <body>
-    <nav id="movie_detail_nav">
-      <div class="detail_nav">
-        <a href="#" class="detail_icon">1</a>
-      </div>
-      <div class="detail_nav">
-        <a href="#icon" class="detail_icon">2</a>
-      </div>
-    </nav>
+    <header class="container">
+      <h1><a href="/">영화 리스트</a></h1>
+
+      <form id="search" action="search.html" method="get">
+        <input id="searchInput" type="text" name="query" placeholder="검색어를 입력해주세요." required />
+        <button id="searchBtn" type="submit">검색</button>
+      </form>
+    </header>
 
     <div id="moviePost"></div>
 
@@ -28,8 +28,8 @@
         <input type="password" class="detail_review_userPwd" id="detailReviewUserPwd" placeholder="비밀번호" required />
         <div class="detail_review_content">
           <textarea class="detail_review_text" id="detailReviewContent" maxlength="50" required></textarea><br />
-          <select class="detail_review_star" id="detailReviewStar" required="required">
-            <option selected value="" hidden>별점을 남겨주세요</option>
+          <select class="detail_review_star" id="detailReviewStar" required>
+            <option selected value="none" hidden>별점을 남겨주세요</option>
             <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
             <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
             <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
