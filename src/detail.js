@@ -9,8 +9,6 @@ async function load() {
 }
 
 load();
-
-// const paintCard = document.getElementById("detailCommentReviewWrap");
 const userId = document.getElementById("detailReviewUserId");
 const userPwd = document.getElementById("detailReviewUserPwd");
 const userStar = document.getElementById("detailReviewStar");
@@ -19,26 +17,19 @@ const userText = document.getElementById("detailReviewContent");
 
 function sendReview(e) {
   e.preventDefault();
-
   // 리뷰키 유무 확인
   let ReviewList = {};
-
   if (window.localStorage.getItem(id) !== null) {
     ReviewList = JSON.parse(window.localStorage.getItem(id));
   }
-
   // 리뷰키 사용자키 유무 확인
   let userKey = "ID_" + userId.value;
-
   if (!ReviewList.hasOwnProperty(userKey)) {
     ReviewList[userKey] = {};
   }
-
   ReviewList[userKey] = userReviewInfo();
-
   // 사용자 리뷰 내용 저장
   window.localStorage.setItem(id, JSON.stringify(ReviewList));
-
   loadReview();
 }
 submitBtn.addEventListener("click", sendReview);
