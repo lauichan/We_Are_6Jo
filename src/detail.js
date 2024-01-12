@@ -75,6 +75,9 @@ function deleteReview() {
   delete ReviewList[reviewId];
 
   window.localStorage.setItem(id, JSON.stringify(ReviewList));
+
+  alert("리뷰를 삭제하시겠습니까?");
+
   alert("삭제되었습니다");
 
   loadReview();
