@@ -1,6 +1,5 @@
 import { moviePage, loadGenre } from "./fetch.js";
 const id = new URL(location.href).searchParams.get("id");
-
 console.log(id);
 
 async function load() {
@@ -24,7 +23,7 @@ const userText = document.getElementById("detailReviewContent");
 
 let reviewStorage = [];
 
-console.log("ddddd");
+// console.log("ddddd");
 
 function sendReview(e) {
   e.preventDefault();
@@ -38,12 +37,15 @@ function sendReview(e) {
 
   // 리뷰키 사용자키 유무 확인
   let userKey = "ID_" + userId.value;
+  console.log(userKey);
 
   if (!xReviewList.hasOwnProperty(userKey)) {
     xReviewList[userKey] = {};
   }
 
   xReviewList[userKey] = userReviewInfo();
+
+  console.log(xReviewList[userKey]);
 
   // 사용자 리뷰 내용 저장
   window.localStorage.setItem(id, JSON.stringify(xReviewList));
@@ -68,6 +70,7 @@ function loadReview() {
   //   guestReview = "";
 
   const xReviewList = JSON.parse(window.localStorage.getItem(id)) || {};
+  console.log(xReviewList);
 
   Object.values(xReviewList).forEach((userReview) => {
     const entryHtml = `
@@ -82,6 +85,7 @@ function loadReview() {
     </li>`;
 
     guestReview.insertAdjacentHTML("beforeend", entryHtml);
+    // console.log(entryHtml);
   });
 }
 
