@@ -29,14 +29,12 @@ console.log("ddddd");
 function sendReview(e) {
   e.preventDefault();
 
-  // 리뷰키 유무 확인
   let xReviewList = {};
 
   if (window.localStorage.getItem(id) !== null) {
     xReviewList = JSON.parse(window.localStorage.getItem(id));
   }
 
-  // 리뷰키 사용자키 유무 확인
   let userKey = "ID_" + userId.value;
 
   if (!xReviewList.hasOwnProperty(userKey)) {
@@ -45,7 +43,6 @@ function sendReview(e) {
 
   xReviewList[userKey] = userReviewInfo();
 
-  // 사용자 리뷰 내용 저장
   window.localStorage.setItem(id, JSON.stringify(xReviewList));
 
   loadReview();
@@ -85,5 +82,4 @@ function loadReview() {
   });
 }
 
-// 페이지 로드시에 loadAndDisplay 함수 호출
 window.addEventListener("load", loadAndDisplay);
