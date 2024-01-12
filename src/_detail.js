@@ -42,6 +42,8 @@ function sendReview(e) {
 
   // 사용자 리뷰 내용 저장
   window.localStorage.setItem("reviewList", JSON.stringify(xReviewList));
+
+  reviewForm();
 }
 submitBtn.addEventListener("click", sendReview);
 
@@ -54,3 +56,25 @@ function userReviewInfo() {
     profile: `img`
   };
 }
+
+function reviewForm() {
+  const userForm = document.getElementById("movieReview");
+
+  userInputReview.forEach((UserInput) => {
+    const inputHTML = `
+        <li>
+          <div class="detail_comment_list_img">
+              <img src="${UserInput.profile}" alt="댓글다는 사용자 사진" />
+              <div class="detail_comment_list_user">
+              <div class="detail_comment_list_user_id" id="userId">${UserInput.userName}</div>
+              <div class="detail_comment_list_user_text" id="userInputComment">${UserInput.content}
+              </div>
+              <div class="detail_comment_list_user_star" id="userInputStar">${UserInput.star}</div>
+              </div>
+          </div>
+       </li>`;
+    userForm.insertAdjacentHTML("beforeend", inputHTML);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", reviewForm);
