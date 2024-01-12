@@ -38,7 +38,7 @@ function sendReview(e) {
 
   // 리뷰키 사용자키 유무 확인
   let userKey = "ID_" + userId.value;
-
+  console.log(userKey);
   if (!xReviewList.hasOwnProperty(userKey)) {
     xReviewList[userKey] = {};
   }

@@ -77,12 +77,17 @@ submitBtn.addEventListener("click", (e) => {
 
   paintCard.reset();
 
-  localStorage.setItem("review", JSON.stringify(webStoreObj));
+  localStorage.setItem("review", JSON.stringify(webStoreData));
+
+  // 화면에 반영하는 로직을 넣기
+
+  // 1
+  // li태그를 억지로 만들어서
 });
 
 let jsonParseData = JSON.parse(localStorage.getItem("review"));
 
-console.log(jsonParseData);
+// console.log(jsonParseData);
 
 let text = `
             <li class= "review__page">
@@ -104,15 +109,19 @@ let text = `
 document.getElementById("movieReview").insertAdjacentHTML("beforeend", text);
 
 // removeData에  데이터를 랜덤으로 부여한다.
-// var codeId = document.getElementById("removebtn").dataset.codeId;
-// console.log(codeId);
 // removeData 버튼에 부여된 랜덤 데이터에 접근한다.
 // 해당 HTML 요소를 찾아  제거한다.
 
 document.getElementById("removeData").addEventListener("click", (event) => {
   const codeId = event.target.dataset.codeId;
-  localStorage.removeItem("review");
+  localStorage.setItem();
 
   const reviewPage = event.target.closest(".review__page");
   reviewPage.remove();
 });
+
+// localstorage에 덮어지는 문제
+
+// 1. 등록 ->  화면을 일부러  리로드 시켜줘서 추가시킨것
+
+// 2. 등록 -> 로컬스트리지 값이 존재 -> DOM 요소로 appendchild
