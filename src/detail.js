@@ -9,10 +9,10 @@ async function load() {
 }
 
 load();
+const form = document.getElementById("detailCommentReviewWrap");
 const userId = document.getElementById("detailReviewUserId");
 const userPwd = document.getElementById("detailReviewUserPwd");
 const userStar = document.getElementById("detailReviewStar");
-const submitBtn = document.getElementById("detailReviewSubmitBtn");
 const userText = document.getElementById("detailReviewContent");
 
 function sendReview(e) {
@@ -36,7 +36,7 @@ function sendReview(e) {
 
   loadReview();
 }
-submitBtn.addEventListener("click", sendReview);
+form.addEventListener("submit", sendReview);
 
 function userReviewInfo() {
   return {
@@ -51,10 +51,6 @@ function loadReview() {
   const guestReview = document.getElementById("movieReview");
   guestReview.innerHTML = "";
   userText.focus();
-
-  if (userText.value == "") {
-    alert("검색어를 입력하세요");
-  }
 
   const ReviewList = JSON.parse(window.localStorage.getItem(id)) || {};
   Object.entries(ReviewList).forEach(([reviewId, review]) => {
