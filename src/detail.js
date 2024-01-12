@@ -73,12 +73,23 @@ function loadReview() {
     </li>`;
     guestReview.insertAdjacentHTML("beforeend", entryHtml);
   });
-  document.querySelectorAll("#deleteReview").forEach((button) => button.addEventListener("click", deleteReview));
+  document.querySelectorAll(".deleteReviewButton").forEach((button) =>
+    button.addEventListener("click", function () {
+      let reviewId = this.closest("li").id;
+      deleteReview(reviewId);
+    })
+  );
 }
 
-function deleteReview() {
-  let reviewId = this.closest("li").id;
-  console.log(reviewId);
+function deleteReview(reviewId) {
+  // 로컬 스토리지에서 해당하는 reviewId 키를 제거합니다.
+  window.localStorage.removeItem(reviewId);
+
+  // reviewId에 해당하는 li 태그를 제거합니다.
+  let reviewElement = document.getElementById(reviewId);
+  reviewElement.parentNode.removeChild(reviewElement);
+
+  // 리뷰를 다시 불러옵니다.
   loadReview();
 }
 
