@@ -1,0 +1,11 @@
+:root {
+  --border-color: #ddd;
+  --movie-genreCrim-color: crimson;
+  --movie-genreAdventure-color: green;
+  --movie-genreDrama-color: purple;
+  --movie-genreRomance-color: deeppink;
+  --movie-genreAnimation-color: dodgerblue;
+  --movie-genreComedy-color: goldenrod;
+  --movie-genreAction-color: orangered;
+  --movie-genreFantasy-color: violet;
+}
