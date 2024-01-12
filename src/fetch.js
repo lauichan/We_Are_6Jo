@@ -22,7 +22,7 @@ export async function loadGenre() {
 export async function loadPage(page) {
   const data = await loadJSON(`${urls}movie/top_rated?api_key=${apikey}&language=en&page=${page}`);
   createCard(data);
-  checkLastPage();
+  checkLastPage(data.results.length);
 }
 
 export async function moviePage(movie_id) {
@@ -34,5 +34,5 @@ export async function moviePage(movie_id) {
 export async function searchPage(page, keyword) {
   const data = await loadJSON(`${urls}search/movie?api_key=${apikey}&query=${keyword}&language=en-US&page=${page}`);
   createCard(data);
-  checkLastPage();
+  checkLastPage(data.results.length);
 }

@@ -67,11 +67,10 @@ export async function loadPost({ id, backdrop_path, title, release_date, genres,
   createGenreList(id, genreIds);
 }
 
-export function checkLastPage() {
-  const cardCount = document.querySelectorAll("#movies > div").length;
+export function checkLastPage(dataLength) {
   const morePageBtn = document.getElementById("morePage");
-  if (cardCount < 20) {
+  if (dataLength < 20) {
     morePageBtn.disabled = true;
-    morePageBtn.textContent = cardCount === 0 ? "검색결과가 없습니다." : "다음 페이지가 없습니다.";
+    morePageBtn.textContent = dataLength === 0 ? "검색결과가 없습니다." : "다음 페이지가 없습니다.";
   }
 }
