@@ -18,7 +18,7 @@ function renderCardHTML(movie) {
   }
 
   return `
-  <div id="${movie.id}">
+  <div id="${movie.id}" class="card">
     <img class="poster" src="${src}" alt="${movie.title}"/>
     <div class="over">
       <h2 class="title">${movie.title}</h2>
@@ -41,7 +41,7 @@ function createGenreList(movieId, genreIds) {
 export function handleClickCard(event) {
   const cardList = document.getElementById("movies");
   if (event.target === cardList) return;
-  let target = event.target.matches("div") ? event.target : event.target.parentNode;
+  let target = event.target.matches("div") ? event.target : event.target.closest(".card");
   location.href = `detail.html?id=${target.id}`;
 }
 
