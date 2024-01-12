@@ -42,6 +42,7 @@ export function handleClickCard(event) {
   const cardList = document.getElementById("movies");
   if (event.target === cardList) return;
   let target = event.target.matches("div") ? event.target : event.target.closest(".card");
+  alert(`${target.id}`);
   location.href = `detail.html?id=${target.id}`;
 }
 
