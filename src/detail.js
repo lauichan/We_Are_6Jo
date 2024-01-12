@@ -53,16 +53,22 @@ function loadReview() {
     <li id=${reviewId}>
       <div class="detail_comment_list_img">
         <div class="detail_comment_list_user">
+
           <div class="detail_comment_list_user_id" id="userId">${review.userName}</div>
           <div class="detail_comment_list_user_text" id="userInputComment">${review.content}</div>
           <div class="detail_comment_list_user_star" id="userInputStar">${review.star}</div>
+
         </div>
-        <button id="deleteReview">삭제</button>
+        <button id="deleteReview" >삭제</button>
       </div>
     </li>`;
     guestReview.insertAdjacentHTML("beforeend", entryHtml);
   });
-  document.querySelectorAll("#deleteReview").forEach((button) => button.addEventListener("click", deleteReview));
+  document.querySelectorAll(".deleteReviewButton").forEach((button) =>
+    button.addEventListener("click", function () {
+      deleteReview();
+    })
+  );
 }
 
 function deleteReview() {
@@ -72,6 +78,7 @@ function deleteReview() {
   delete ReviewList[reviewId];
 
   window.localStorage.setItem(id, JSON.stringify(ReviewList));
+
   loadReview();
 
   if (Object.keys(ReviewList).length === 0) {
