@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>detail page by</title>
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <script type="module" src="src/detail.js"></script>
     <title>detail page by</title>
   </head>
   <body>
-    <header class="container">
+    <header>
       <h1><a href="/">영화 리스트</a></h1>
 
       <form id="search" action="search.html" method="get">
@@ -18,30 +19,38 @@
       </form>
     </header>
 
-    <div id="moviePost"></div>
+    <main class="container">
+      <div id="moviePost"></div>
 
-    <section class="detail_comment">
-      <div class="detail_comment_title">영화 사용자 감상평</div>
-      <!--댓글 창 만들기-->
-      <form class="detail_comment_review_wrap" id="detailCommentReviewWrap">
-        <input type="text" class="detail_review_userId" id="detailReviewUserId" placeholder="아이디" required />
-        <input type="password" class="detail_review_userPwd" id="detailReviewUserPwd" placeholder="비밀번호" required />
-        <div class="detail_review_content">
-          <textarea class="detail_review_text" id="detailReviewContent" maxlength="50" required></textarea><br />
-          <select class="detail_review_star" id="detailReviewStar" required>
-            <option selected value="none" hidden>별점을 남겨주세요</option>
-            <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
-            <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
-            <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
-            <option value="⭐️⭐️">⭐️⭐️</option>
-            <option value="⭐️">⭐️</option>
-          </select>
-        </div>
-        <button type="reset" id="detailReviewResetBtn">취소</button>
-        <button type="submit" id="detailReviewSubmitBtn">저장</button>
-      </form>
+      <section class="detail_comment">
+        <div class="detail_comment_title">영화 사용자 감상평</div>
+        <!--댓글 창 만들기-->
+        <form class="detail_comment_review_wrap" id="detailCommentReviewWrap">
+          <input type="text" class="detail_review_userId" id="detailReviewUserId" placeholder="아이디" required />
+          <input
+            type="password"
+            class="detail_review_userPwd"
+            id="detailReviewUserPwd"
+            placeholder="비밀번호"
+            required
+          />
+          <div class="detail_review_content">
+            <textarea class="detail_review_text" id="detailReviewContent" maxlength="50" required></textarea><br />
+            <select class="detail_review_star" id="detailReviewStar" required>
+              <option selected value="none" hidden>별점을 남겨주세요</option>
+              <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+              <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+              <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+              <option value="⭐️⭐️">⭐️⭐️</option>
+              <option value="⭐️">⭐️</option>
+            </select>
+          </div>
+          <button type="reset" id="detailReviewResetBtn">취소</button>
+          <button type="submit" id="detailReviewSubmitBtn">저장</button>
+        </form>
 
-      <ul class="detail_comment_wrap_list" id="movieReview"></ul>
-    </section>
+        <ul class="detail_comment_wrap_list" id="movieReview"></ul>
+      </section>
+    </main>
   </body>
 </html>

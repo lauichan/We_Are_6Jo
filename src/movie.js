@@ -12,7 +12,7 @@ export function createCard(response) {
 function renderCardHTML(movie) {
   let src = "";
   if (movie.poster_path) {
-    src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+    src = `https://image.tmdb.org/t/p/w300${movie.backdrop_path}`;
   } else {
     src = "images/noimage.jpg";
   }
@@ -20,9 +20,11 @@ function renderCardHTML(movie) {
   return `
   <div id="${movie.id}">
     <img class="poster" src="${src}" alt="${movie.title}"/>
-    <h2 class="title">${movie.title}</h2>
-    <ul class="genre"></ul>
-    <p class="vote">${(movie.vote_average * 10).toFixed(1)}%</p>
+    <div class="over">
+      <h2 class="title">${movie.title}</h2>
+      <ul class="genre"></ul>
+      <p class="vote">${(movie.vote_average * 10).toFixed(1)}%</p>
+    </div>
   </div>`;
 }
 
