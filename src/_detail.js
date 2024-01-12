@@ -8,6 +8,11 @@ async function load() {
   return moviePage(id);
 }
 
+async function loadAndDisplay() {
+  // 리뷰 표시
+  loadReview();
+}
+
 console.log("생성체크용", load());
 
 const paintCard = document.getElementById("detailCommentReviewWrap");
@@ -43,7 +48,7 @@ function sendReview(e) {
   // 사용자 리뷰 내용 저장
   window.localStorage.setItem("reviewList", JSON.stringify(xReviewList));
 
-  loadReview();
+  //   loadReview();
 }
 submitBtn.addEventListener("click", sendReview);
 
@@ -52,31 +57,33 @@ function userReviewInfo() {
     userName: userId.value,
     pwd: userPwd.value,
     content: userText.value,
-    star: userStar.value,
-    profile: `img`
+    star: userStar.value
   };
 }
 
 function loadReview() {
   const guestReview = document.getElementById("movieReview");
 
-  guestReview.innerHTML = "";
+  //   guestReview.innerHTML = "";
+  //   guestReview = "";
 
   const xReviewList = JSON.parse(window.localStorage.getItem("reviewList")) || {};
 
   Object.values(xReviewList).forEach((userReview) => {
     const entryHtml = `
-        <li>
-          <div class="detail_comment_list_img">
-            <img src="${userReview.profile}" alt="user 사진" />
-            <div class="detail_comment_list_user">
-              <div class="detail_comment_list_user_id" id="userId">${userReview.userName}</div>
-              <div class="detail_comment_list_user_text" id="userInputComment">${userReview.content}</div>
-              <div class="detail_comment_list_user_star" id="userInputStar">${userReview.star}</div>
-            </div>
-          </div>
-        </li>`;
+    <li>
+      <div class="detail_comment_list_img">
+        <div class="detail_comment_list_user">
+          <div class="detail_comment_list_user_id" id="userId">${userReview.userName}</div>
+          <div class="detail_comment_list_user_text" id="userInputComment">${userReview.content}</div>
+          <div class="detail_comment_list_user_star" id="userInputStar">${userReview.star}</div>
+        </div>
+      </div>
+    </li>`;
 
     guestReview.insertAdjacentHTML("beforeend", entryHtml);
   });
 }
+
+// 페이지 로드시에 loadAndDisplay 함수 호출
+window.addEventListener("load", loadAndDisplay);
