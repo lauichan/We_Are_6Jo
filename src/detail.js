@@ -30,6 +30,7 @@ function sendReview(e) {
   ReviewList[userKey] = userReviewInfo();
   // 사용자 리뷰 내용 저장
   window.localStorage.setItem(id, JSON.stringify(ReviewList));
+  alert("리뷰가 작성되었습니다.");
   loadReview();
 }
 submitBtn.addEventListener("click", sendReview);
@@ -74,6 +75,7 @@ function deleteReview() {
   delete ReviewList[reviewId];
 
   window.localStorage.setItem(id, JSON.stringify(ReviewList));
+  alert("삭제되었습니다");
 
   loadReview();
 
