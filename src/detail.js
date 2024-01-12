@@ -9,10 +9,10 @@ async function load() {
 }
 
 load();
+const form = document.getElementById("detailCommentReviewWrap");
 const userId = document.getElementById("detailReviewUserId");
 const userPwd = document.getElementById("detailReviewUserPwd");
 const userStar = document.getElementById("detailReviewStar");
-const submitBtn = document.getElementById("detailReviewSubmitBtn");
 const userText = document.getElementById("detailReviewContent");
 
 function sendReview(e) {
@@ -32,7 +32,7 @@ function sendReview(e) {
   window.localStorage.setItem(id, JSON.stringify(ReviewList));
   loadReview();
 }
-submitBtn.addEventListener("click", sendReview);
+form.addEventListener("submit", sendReview);
 
 function userReviewInfo() {
   return {
