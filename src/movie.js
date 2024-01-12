@@ -10,11 +10,17 @@ export function createCard(response) {
 }
 
 function renderCardHTML(movie) {
+  let src = "";
+  if (movie.poster_path) {
+    src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+  } else {
+    src = "images/noimage.jpg";
+  }
+
   return `
   <div id="${movie.id}">
-    <img class="poster" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" title="${movie.id}"/>
+    <img class="poster" src="${src}" alt="${movie.title}"/>
     <h2 class="title">${movie.title}</h2>
-    <p class="overview">${movie.overview}</p>
     <ul class="genre"></ul>
     <p class="vote">${(movie.vote_average * 10).toFixed(1)}%</p>
   </div>`;
@@ -34,10 +40,7 @@ export function handleClickCard(event) {
   const cardList = document.getElementById("movies");
   if (event.target === cardList) return;
   let target = event.target.matches("div") ? event.target : event.target.parentNode;
-  alert(`영화 id: ${target.id}`);
-  target.classList.toggle("click");
   location.href = `detail.html?id=${target.id}`;
-  console.log("click");
 }
 
 export async function loadPost({ id, backdrop_path, title, release_date, genres, overview }) {
@@ -62,4 +65,12 @@ export async function loadPost({ id, backdrop_path, title, release_date, genres,
   document.getElementById("moviePost").insertAdjacentHTML("beforeend", dataLoad);
   let genreIds = genres.map((a) => a.id);
   createGenreList(id, genreIds);
+}
+
+export function checkLastPage(dataLength) {
+  const morePageBtn = document.getElementById("morePage");
+  if (dataLength < 20) {
+    morePageBtn.disabled = true;
+    morePageBtn.textContent = dataLength === 0 ? "검색결과가 없습니다." : "다음 페이지가 없습니다.";
+  }
 }
