@@ -43,7 +43,7 @@ function sendReview(e) {
   // 사용자 리뷰 내용 저장
   window.localStorage.setItem("reviewList", JSON.stringify(xReviewList));
 
-  reviewForm();
+  loadReview();
 }
 submitBtn.addEventListener("click", sendReview);
 
@@ -57,24 +57,26 @@ function userReviewInfo() {
   };
 }
 
-function reviewForm() {
-  const userForm = document.getElementById("movieReview");
+function loadReview() {
+  const guestReview = document.getElementById("movieReview");
 
-  userInputReview.forEach((UserInput) => {
-    const inputHTML = `
+  guestReview.innerHTML = "";
+
+  const xReviewList = JSON.parse(window.localStorage.getItem("reviewList")) || {};
+
+  Object.values(xReviewList).forEach((userReview) => {
+    const entryHtml = `
         <li>
           <div class="detail_comment_list_img">
-              <img src="${UserInput.profile}" alt="댓글다는 사용자 사진" />
-              <div class="detail_comment_list_user">
-              <div class="detail_comment_list_user_id" id="userId">${UserInput.userName}</div>
-              <div class="detail_comment_list_user_text" id="userInputComment">${UserInput.content}
-              </div>
-              <div class="detail_comment_list_user_star" id="userInputStar">${UserInput.star}</div>
-              </div>
+            <img src="${userReview.profile}" alt="user 사진" />
+            <div class="detail_comment_list_user">
+              <div class="detail_comment_list_user_id" id="userId">${userReview.userName}</div>
+              <div class="detail_comment_list_user_text" id="userInputComment">${userReview.content}</div>
+              <div class="detail_comment_list_user_star" id="userInputStar">${userReview.star}</div>
+            </div>
           </div>
-       </li>`;
-    userForm.insertAdjacentHTML("beforeend", inputHTML);
+        </li>`;
+
+    guestReview.insertAdjacentHTML("beforeend", entryHtml);
   });
 }
-
-document.addEventListener("DOMContentLoaded", reviewForm);
