@@ -9,7 +9,6 @@ async function load() {
 }
 
 load();
-load();
 
 // const paintCard = document.getElementById("detailCommentReviewWrap");
 const userId = document.getElementById("detailReviewUserId");
