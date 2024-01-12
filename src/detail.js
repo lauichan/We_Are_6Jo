@@ -50,6 +50,7 @@ function userReviewInfo() {
 function loadReview() {
   const guestReview = document.getElementById("movieReview");
   guestReview.innerHTML = "";
+  userText.focus();
 
   const ReviewList = JSON.parse(window.localStorage.getItem(id)) || {};
   Object.entries(ReviewList).forEach(([reviewId, review]) => {
