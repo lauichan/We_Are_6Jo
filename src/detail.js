@@ -9,10 +9,10 @@ async function load() {
 }
 
 load();
+const form = document.getElementById("detailCommentReviewWrap");
 const userId = document.getElementById("detailReviewUserId");
 const userPwd = document.getElementById("detailReviewUserPwd");
 const userStar = document.getElementById("detailReviewStar");
-const submitBtn = document.getElementById("detailReviewSubmitBtn");
 const userText = document.getElementById("detailReviewContent");
 
 function sendReview(e) {
@@ -33,7 +33,7 @@ function sendReview(e) {
   alert("리뷰가 작성되었습니다.");
   loadReview();
 }
-submitBtn.addEventListener("click", sendReview);
+form.addEventListener("submit", sendReview);
 
 function userReviewInfo() {
   return {
@@ -47,6 +47,7 @@ function userReviewInfo() {
 function loadReview() {
   const guestReview = document.getElementById("movieReview");
   guestReview.innerHTML = "";
+  userText.focus();
 
   const ReviewList = JSON.parse(window.localStorage.getItem(id)) || {};
   Object.entries(ReviewList).forEach(([reviewId, review]) => {
