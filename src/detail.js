@@ -64,11 +64,7 @@ function loadReview() {
     </li>`;
     guestReview.insertAdjacentHTML("beforeend", entryHtml);
   });
-  document.querySelectorAll(".deleteReviewButton").forEach((button) =>
-    button.addEventListener("click", function () {
-      deleteReview();
-    })
-  );
+  document.querySelectorAll("#deleteReview").forEach((button) => button.addEventListener("click", deleteReview));
 }
 
 function deleteReview() {
