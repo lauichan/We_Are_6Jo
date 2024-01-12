@@ -63,16 +63,17 @@ function loadReview() {
   //   guestReview = "";
 
   const ReviewList = JSON.parse(window.localStorage.getItem(id)) || {};
-
+  console.log(ReviewList);
   Object.values(ReviewList).forEach((userReview) => {
     const entryHtml = `
-    <li>
+    <li id=>
       <div class="detail_comment_list_img">
         <div class="detail_comment_list_user">
           <div class="detail_comment_list_user_id" id="userId">${userReview.userName}</div>
           <div class="detail_comment_list_user_text" id="userInputComment">${userReview.content}</div>
           <div class="detail_comment_list_user_star" id="userInputStar">${userReview.star}</div>
         </div>
+        <button id="deleteReview">삭제</button>
       </div>
     </li>`;
 
@@ -80,5 +81,13 @@ function loadReview() {
   });
 }
 
+function deleteReview() {
+  console.log("가나다라");
+  window.localStorage.getItem(id.userKey);
+  console.log("키", window.localStorage.getItem(id.userKey));
+  loadReview();
+}
+
 // 페이지 로드시에 loadAndDisplay 함수 호출
 window.addEventListener("load", loadReview);
+document.getElementById("deleteReview").addEventListener("click", deleteReview);
