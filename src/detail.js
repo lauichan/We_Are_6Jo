@@ -83,7 +83,6 @@ function deleteReview() {
   delete ReviewList[reviewId];
 
   window.localStorage.setItem(id, JSON.stringify(ReviewList));
-  alert("삭제되었습니다");
 
   alert("삭제되었습니다.");
   loadReview();
