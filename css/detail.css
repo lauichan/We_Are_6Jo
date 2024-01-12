@@ -47,6 +47,10 @@ body {
 
 .detail_movie_wrap_two {
   display: flex;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  align-items: center;
 }
 
 .detail_movie_wrap_time_genre {
@@ -56,6 +60,10 @@ body {
 
 .detail_movie_wrap_year {
   font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-left: 00px;
 }
 
 .detail_movie_over_view {
@@ -78,7 +86,7 @@ body {
 }
 
 .detail_comment {
-  margin: 20px;
+  margin: 40px;
 }
 
 .detail_comment_title {
@@ -96,6 +104,7 @@ body {
   align-items: center;
   margin-bottom: 20px;
   border-radius: 5%;
+  margin-left: 90px;
 }
 
 .detail_comment_list_img img {
@@ -106,13 +115,24 @@ body {
   margin-right: 10px;
 }
 
-.detail_comment_list_user_id {
-  font-weight: bold;
+.detail_comment_list_user_id,
+.detail_comment_list_user_text,
+.detail_comment_list_user_score {
+  padding-left: 40px;
+  padding-top: 10px;
 }
 
-.detail_comment_list_user_score {
-  font-style: italic;
-  color: #888;
+.detail_comment_list_user_star {
+  padding-left: 1500px;
+  padding-top: 4px;
+  font-size: small;
+  background-color: aqua;
+}
+
+.detail_comment_list_user_text {
+  font-size: 12px;
+  padding: 10px;
+  background-color: #007bff;
 }
 
 .detail_section {
@@ -134,14 +154,6 @@ body {
   right: 0;
 }
 
-.detail_movie_wrap_two {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
-  align-items: center;
-  display: flex;
-}
-
 /* Styles for the unordered list with class "genre" */
 .genre {
   list-style: none;
@@ -154,17 +166,24 @@ body {
   padding: 10px;
 }
 
-/* Styles for the paragraph with class "detail_movie_wrap_year" */
-.detail_movie_wrap_year {
-  color: #333;
-  font-weight: bold;
-  margin-top: 5px;
-  margin-left: 00px;
+#detailCommentReviewWrap {
+  border-radius: 10px;
+  padding: 20px;
+  width: 600px;
+  border: 1px solid black;
+  margin-left: 600px;
 }
 
-.detail_comment_list_user_id,
-.detail_comment_list_user_text,
-.detail_comment_list_user_score {
-  padding-left: 40px;
-  padding-top: 10px;
+#detailCommentReviewWrap > .detail_review_userId,
+#detailCommentReviewWrap > .detail_review_userPwd {
+  margin: 10px;
+  padding: 5px;
+}
+
+#detailCommentReviewWrap > .detail_review_content > .detail_review_text {
+  width: 500px;
+}
+
+#detailCommentReviewWrap > .detail_review_content > .detail_review_star {
+  margin-left: 490px;
 }
