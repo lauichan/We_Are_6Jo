@@ -1,0 +1,189 @@
+/* Reset some default styles for better consistency */
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  position: sticky;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Global styles */
+.detail_nav {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.detail_icon {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.detail_main {
+  text-align: center;
+  margin: 20px;
+}
+
+.detail_bg_img {
+  width: 500px;
+  height: 500px;
+  border-radius: 12px;
+}
+
+.detail_movie_title {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.detail_movie_wrap_two {
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  align-items: center;
+}
+
+.detail_movie_wrap_time_genre {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.detail_movie_wrap_year {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-left: 00px;
+}
+
+.detail_movie_over_view {
+  margin: 20px 0;
+}
+
+.detail_movie_over_view_text {
+  font-size: 16px;
+}
+
+.detail_movie_appreciate {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 30px;
+  margin-left: 1000px;
+}
+
+.detail_comment {
+  margin: 40px;
+}
+
+.detail_comment_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.detail_comment_wrap_list {
+  list-style: none;
+}
+
+.detail_comment_list_img {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 5%;
+  margin-left: 90px;
+}
+
+.detail_comment_list_img img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background-color: #007bff;
+  margin-right: 10px;
+}
+
+.detail_comment_list_user_id,
+.detail_comment_list_user_text,
+.detail_comment_list_user_score {
+  padding-left: 40px;
+  padding-top: 10px;
+}
+
+.detail_comment_list_user_star {
+  padding-left: 1500px;
+  padding-top: 4px;
+  font-size: small;
+  background-color: aqua;
+}
+
+.detail_comment_list_user_text {
+  font-size: 12px;
+  padding: 10px;
+  background-color: #007bff;
+}
+
+.detail_section {
+  margin: 100px;
+}
+
+#moviePost {
+  display: flex;
+  margin-top: 10px;
+}
+
+#movie_detail_nav {
+  display: flex;
+  position: sticky;
+  top: 0px;
+  top: 0;
+  /* width: 100% */
+  left: 0;
+  right: 0;
+}
+
+/* Styles for the unordered list with class "genre" */
+.genre {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.genre > .crime,
+.genre > .drama {
+  padding: 10px;
+}
+
+#detailCommentReviewWrap {
+  border-radius: 10px;
+  padding: 20px;
+  width: 600px;
+  border: 1px solid black;
+  margin-left: 600px;
+}
+
+#detailCommentReviewWrap > .detail_review_userId,
+#detailCommentReviewWrap > .detail_review_userPwd {
+  margin: 10px;
+  padding: 5px;
+}
+
+#detailCommentReviewWrap > .detail_review_content > .detail_review_text {
+  width: 500px;
+}
+
+#detailCommentReviewWrap > .detail_review_content > .detail_review_star {
+  margin-left: 490px;
+}
