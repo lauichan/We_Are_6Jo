@@ -221,6 +221,7 @@ footer {
 }
 
 .detail_comment_review_wrap {
+  border: solid 1px;
   display: flex;
   flex-direction: column;
   background-color: green;
