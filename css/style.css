@@ -122,3 +122,7 @@ footer {
   font-weight: bold;
   font-size: 2rem;
 }
+
+.container > #moviePost {
+  margin-top: 20px;
+}
