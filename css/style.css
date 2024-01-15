@@ -226,6 +226,12 @@ footer {
   scroll-behavior: smooth;
   justify-content: flex-end;
   margin-top: 80px;
+  border: 1px solid #fff;
+}
+
+.rightSide > .detail_movie_appreciate:hover {
+  color: rgba(255, 0, 0, 0.692);
+  transition: all 0.5s;
 }
 
 .detail_comment {
@@ -333,7 +339,9 @@ footer {
 }
 
 #deleteReview {
-  margin-left: 1100px;
+  display: flex;
+  justify-content: flex-end;
+  /* margin-left: 1100px; */
   margin-bottom: 10px;
   background-color: transparent;
   border-color: white;
