@@ -38,7 +38,7 @@ function createGenreList(movieId, genreIds) {
 export function handleClickCard(event) {
   const cardList = document.getElementById("movies");
   if (event.target === cardList) return;
-  let target = event.target.matches("div") ? event.target : event.target.closest(".card");
+  let target = event.target.closest(".card");
   alert(`${target.id}`); // 나중에 지우세요.
   location.href = `detail.html?id=${target.id}`;
 }
