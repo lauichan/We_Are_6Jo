@@ -31,6 +31,11 @@ a {
   color: inherit;
 }
 
+/* 장르가 들어갈 ul태그입니다. */
+ul {
+  margin-bottom: 2rem;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -181,32 +186,45 @@ footer {
   margin-top: 20px;
 }
 
-.detail_movie_appreciate {
-  scroll-behavior: smooth;
-}
-
 .detail_section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .detail_section > .leftSide {
   display: flex;
   flex-direction: column;
   min-width: 400px;
-}
-
-.detail_section > .rightSide {
-  display: flex;
-  flex-direction: column;
+  padding-left: 40px;
 }
 
 .leftSide > .detail_comment {
   font-family: "LINESeedKR-Bd";
   display: flex;
   flex-direction: column;
-  margin: 50px auto 40px auto;
+}
+
+.leftSide > .detail_movie_vote {
+  margin-top: 40px;
+  font-size: 22px;
+}
+
+.detail_section > .rightSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 0 50px 0;
+  font-size: 1.3rem;
+}
+
+.rightSide > .detail_movie_appreciate {
+  display: flex;
+  scroll-behavior: smooth;
+  justify-content: flex-end;
+  margin-top: 80px;
 }
 
 .detail_comment {
