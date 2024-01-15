@@ -29,11 +29,26 @@
         <!--댓글 창 만들기-->
         <form class="detail_comment_review_wrap" id="detailCommentReviewWrap">
           <div class="detail_wrap_comment_idPwd">
-            <input type="text" id="detailReviewUserId" placeholder="아이디" required />
-            <input type="password" id="detailReviewUserPwd" placeholder="비밀번호" required />
+            <input type="text" id="detailReviewUserId" minlength="2" maxlength="50" placeholder="아이디" required />
+            <input
+              type="password"
+              id="detailReviewUserPwd"
+              minlength="2"
+              maxlength="50"
+              placeholder="비밀번호"
+              required
+            />
           </div>
           <div class="detail_wrap_star_btn">
-            <textarea class="detail_review_text" id="detailReviewContent" maxlength="50" required></textarea><br />
+            <textarea
+              class="detail_review_text"
+              id="detailReviewContent"
+              minlength="2"
+              maxlength="300"
+              placeholder="리뷰를 남겨주세요."
+              required
+            ></textarea
+            ><br />
             <div class="detail_wrap_bottom">
               <select class="detail_review_star" id="detailReviewStar" required>
                 <option selected value="" hidden>별점을 남겨주세요</option>
