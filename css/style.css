@@ -202,7 +202,7 @@ footer {
   flex-direction: column;
 }
 
-.leftSide > . .detail_comment {
+.leftSide > .detail_comment {
   font-family: "LINESeedKR-Bd";
   display: flex;
   flex-direction: column;
@@ -321,4 +321,14 @@ footer {
   border: 1px solid white;
   color: white;
   padding: 10px;
+}
+
+/* crime */
+.crime {
+  background-color: var(--movie-genreCrim-color);
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding-left: 4px;
 }
