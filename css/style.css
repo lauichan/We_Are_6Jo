@@ -95,7 +95,7 @@ main {
 }
 
 #movies > div {
-  max-width: 300px;
+  width: 300px;
   position: relative;
   flex-grow: 1;
 }
