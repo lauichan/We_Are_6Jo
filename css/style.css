@@ -41,7 +41,7 @@ header {
   /* 페이지 고정 */
   left: 0;
   top: 0;
-  position: fixed;
+  position: sticky;
   width: 100%;
   z-index: 11;
 }
