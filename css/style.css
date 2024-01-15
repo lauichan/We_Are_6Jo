@@ -409,6 +409,7 @@ footer {
 
 /* 리뷰창 Pwd */
 .detail_comment_list_img > .detail_comment_list_user > .detail_comment_list_user_text {
+  font-family: GmarketSansMedium;
   display: flex;
   font-size: 1.2rem;
   align-items: center;
