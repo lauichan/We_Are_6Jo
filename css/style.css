@@ -169,6 +169,28 @@ footer {
   flex-direction: column;
   margin: 50px auto 40px auto;
 }
+.detail_comment {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid coral;
+}
+
+.detail_comment_review_wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+#detailReviewUserId,
+#detailReviewUserPwd {
+  width: 190px;
+  height: 35px;
+  margin: 5px;
+}
+
+#detailReviewContent {
+  width: 500px;
+  height: 35px;
+}
 
 .detail_movie_appreciate {
   scroll-behavior: smooth;
