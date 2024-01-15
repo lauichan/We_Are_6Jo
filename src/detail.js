@@ -25,8 +25,7 @@ function sendReview(e) {
   if (window.localStorage.getItem(id) !== null) {
     ReviewList = JSON.parse(window.localStorage.getItem(id));
   }
-  // 리뷰키 사용자키 유무 확인
-  let userKey = "ID_" + userId.value;
+  let userKey = crypto.randomUUID();
   if (!ReviewList.hasOwnProperty(userKey)) {
     ReviewList[userKey] = {};
   }
@@ -77,10 +76,12 @@ function deleteReview() {
   let reviewId = this.closest("li").id;
   let ReviewList = JSON.parse(window.localStorage.getItem(id));
 
-  if (prompt("리뷰를 삭제하시겠습니까?") === ReviewList[reviewId].pwd) {
+  if (prompt("비밀번호를 입력해주세요") === ReviewList[reviewId].pwd) {
     delete ReviewList[reviewId];
     window.localStorage.setItem(id, JSON.stringify(ReviewList));
-    alert("삭제되었습니다");
+    alert("삭제되었습니다.");
+  } else {
+    alert("비밀번호가 올바르지 않습니다.");
   }
 
   loadReview();
