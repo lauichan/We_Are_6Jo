@@ -329,8 +329,30 @@ footer {
 
 .detail_comment_list_img {
   /* background-color: #84868d; */
-  margin-top: 14px;
+  margin-top: 2rem;
   border: 1px solid white;
+}
+
+.detail_comment_list_img > .detail_comment_list_user {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  padding-top: 1rem;
+}
+
+.detail_comment_list_img > .detail_comment_list_user > .detail_comment_list_user_id {
+  font-size: 1.5rem;
+  margin-left: 0.3rem;
+}
+
+.detail_comment_list_img > .detail_comment_list_user > .detail_comment_list_user_text {
+  margin-left: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.detail_comment_list_img > .detail_comment_list_user > .detail_comment_list_user_star {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2rem;
 }
 
 #deleteReview {
