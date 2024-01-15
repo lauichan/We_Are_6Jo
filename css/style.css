@@ -373,7 +373,7 @@ footer {
   padding: 10px;
 }
 
-/* crime */
+/* 장르별 디자인 */
 .crime {
   background-color: var(--movie-genreCrim-color);
   width: 50px;
