@@ -52,18 +52,22 @@ export async function loadPost({ id, backdrop_path, title, release_date, genres,
     </div>
   </div>
   <section class="detail_section">
-    <h1 class="detail_movie_title">${title}</h1>
-    <div class="detail_movie_wrap_two" id="${id}">
-      <ul class="genre"></ul>
-      <p class="detail_movie_wrap_year">${release_date}</p>
+    <div class="leftSide">
+      <h1 class="detail_movie_title">${title}</h1>
+      <div class="detail_movie_wrap_two" id="${id}">
+        <ul class="genre"></ul>
+        <p class="detail_movie_wrap_year">${release_date}</p>
+      </div>
+      <div class="detail_movie_vote">
+        <p class="detail_movie_vote_average">${vote_average}</p>
+      </div>
     </div>
-    <div class="detail_movie_vote">
-      <p class="detail_movie_vote_average">${vote_average}</p>
+    <div class="rightSide">
+      <div class="detail_movie_over_view">
+        <p class="detail_movie_over_view_text">${overview}</p>
+      </div>
+      <a href ="#detail_commentView" class="detail_movie_appreciate" >리뷰 남기기</a>
     </div>
-    <div class="detail_movie_over_view">
-      <p class="detail_movie_over_view_text">${overview}</p>
-    </div>
-    <a href ="#detail_commentView" class="detail_movie_appreciate" >리뷰 남기기</a>
   </section>`;
 
   document.getElementById("moviePost").insertAdjacentHTML("beforeend", dataLoad);
