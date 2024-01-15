@@ -226,7 +226,6 @@ footer {
   scroll-behavior: smooth;
   justify-content: flex-end;
   margin-top: 80px;
-  border: 1px solid #fff;
 }
 
 .rightSide > .detail_movie_appreciate:hover {
