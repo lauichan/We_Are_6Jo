@@ -58,8 +58,8 @@ export async function loadPost({ id, backdrop_path, title, release_date, genres,
         <ul class="genre"></ul>
       </div>
       <div class="detail_movie_vote">
-        <p class="detail_movie_wrap_year">${release_date}</p>
-        <p class="detail_movie_vote_average">${vote_average}</p>
+        <p class="detail_movie_wrap_year">Release Date :  ${release_date}</p>
+        <p class="detail_movie_vote_average">${Math.floor(vote_average * 10)}%</p>
       </div>
     </div>
     <div class="rightSide">
