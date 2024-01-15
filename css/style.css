@@ -194,7 +194,7 @@ footer {
 
 .detail_comment_review_wrap {
   display: flex;
-
+  border: 2px solid white;
   /* background-color: aqua; */
   margin-top: 10px;
 }
@@ -261,7 +261,7 @@ footer {
   padding: 4px;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 355px;
+
   border-radius: 4px;
 }
 
@@ -269,11 +269,20 @@ footer {
   color: white;
 }
 
-#detailReviewResetBtn,
-#detailReviewSubmitBtn {
+#detailReviewResetBtn {
   border-radius: 5px;
   padding: 10px;
   border-color: white;
   background-color: transparent;
   color: white;
+}
+#detailReviewSubmitBtn {
+  border-radius: 5px;
+
+  padding: 10px;
+  border-color: white;
+  background-color: transparent;
+  color: white;
+  margin-bottom: 19px;
+  margin-left: 400px;
 }
