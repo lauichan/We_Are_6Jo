@@ -123,6 +123,13 @@ footer {
   font-size: 2rem;
 }
 
+.detail_section,
+.detail_comment {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto 40px auto;
+}
+
 .detail_movie_appreciate {
   scroll-behavior: smooth;
 }
