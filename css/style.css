@@ -81,14 +81,16 @@ main {
 /* 지연 */
 #movies > div:hover .over {
   display: block;
+  max-width: 300px;
 }
 
 #movies > div .over {
   position: absolute;
-  left: 1rem;
-  bottom: 1rem;
+  /* left: 1rem;
+  bottom: 1rem; */
   display: none;
   width: 100%;
+  background-color: green;
 }
 
 #movies > div .title {
