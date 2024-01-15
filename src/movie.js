@@ -22,8 +22,6 @@ function renderCardHTML(movie) {
     <img class="poster" src="${src}" alt="${movie.title}"/>
     <div class="over">
       <h2 class="title">${movie.title}</h2>
-      <ul class="genre"></ul>
-      <p class="vote">${(movie.vote_average * 10).toFixed(1)}%</p>
     </div>
   </div>`;
 }
