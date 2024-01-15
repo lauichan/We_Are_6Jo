@@ -266,10 +266,12 @@ footer {
   margin-top: 10px;
   flex-wrap: wrap;
   flex-direction: column;
+  gap: 0.5rem;
 }
 
 .detail_wrap_comment_idPwd {
   display: flex;
+  gap: 0.5rem;
 }
 
 #detailCommentReviewWrap i {
@@ -285,9 +287,24 @@ footer {
   font-size: 100%;
   width: 210px;
   height: 35px;
-  margin: 7px;
   border-radius: 4px;
   padding: 0.5rem;
+  border: none;
+}
+
+#detailReviewUserId {
+  background: url("https://api.iconify.design/fa6-regular/address-card.svg?color=white") no-repeat left 0.5rem center /
+    contain;
+  background-size: 20px 20px;
+  background-color: #343434;
+  padding-left: 2.3rem;
+}
+
+#detailReviewUserPwd {
+  background: url("https://api.iconify.design/fa6-solid/lock.svg?color=white") no-repeat left 0.5rem center / contain;
+  background-size: 18px 18px;
+  background-color: #343434;
+  padding-left: 2.3rem;
 }
 
 #detailReviewContent {
