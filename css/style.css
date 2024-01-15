@@ -173,7 +173,6 @@ footer {
 .detail_comment {
   display: flex;
   flex-direction: column;
-  border: 3px solid coral;
 }
 
 .detail_comment_review_wrap {
@@ -181,11 +180,19 @@ footer {
   flex-direction: row;
 }
 
+#detailCommentReviewWrap > i {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3px;
+}
+
 #detailReviewUserId,
 #detailReviewUserPwd {
-  width: 190px;
+  width: 210px;
   height: 35px;
-  margin: 5px;
+  margin: 7px;
 }
 
 #detailReviewContent {
