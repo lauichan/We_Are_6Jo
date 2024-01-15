@@ -218,6 +218,8 @@ footer {
   width: 210px;
   height: 35px;
   margin: 7px;
+  border-radius: 4px;
+  padding: 0.5rem;
 }
 
 #detailReviewContent {
@@ -250,34 +252,30 @@ footer {
 }
 
 #detailReviewStar {
-  color: #343434;
+  color: white;
+  background: #343434;
   padding: 4px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-
   border-radius: 4px;
 }
 
 .detail_wrap_bottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 #detailReviewResetBtn {
   border-radius: 5px;
   padding: 10px;
-  border-color: white;
-  background-color: transparent;
+  border: none;
+  background-color: #343434;
   color: white;
 }
 
 #detailReviewSubmitBtn {
   border-radius: 5px;
-
   padding: 10px;
-  border-color: white;
-  background-color: transparent;
+  border: none;
+  background-color: #343434;
   color: white;
-  margin-bottom: 19px;
-  margin-left: 400px;
 }
