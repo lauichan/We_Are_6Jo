@@ -200,7 +200,7 @@ footer {
   flex-direction: row;
 }
 
-.detail_comment > .detail_comment_review_wrap {
+.detail_comment .detail_comment_review_wrap {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -232,9 +232,10 @@ footer {
 
 .detail_comment_review_wrap {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex-wrap: wrap;
   background-color: green;
-  width: 600px;
+  width: 100%;
   min-width: 500px;
   justify-content: center;
   align-items: center;
