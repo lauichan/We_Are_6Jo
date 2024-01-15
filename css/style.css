@@ -159,6 +159,10 @@ footer {
   font-size: 2rem;
 }
 
+.container > #moviePost {
+  margin-top: 20px;
+}
+
 .detail_section,
 .detail_comment {
   display: flex;
