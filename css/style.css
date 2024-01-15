@@ -41,6 +41,7 @@ body {
   flex-direction: column;
   color: white;
   background-color: black;
+  line-height: 1.6;
 }
 
 header {
@@ -187,6 +188,7 @@ footer {
   flex-direction: column;
   margin: 50px auto 40px auto;
 }
+
 .detail_comment {
   display: flex;
   flex-direction: column;
@@ -194,15 +196,9 @@ footer {
 
 .detail_comment_review_wrap {
   display: flex;
-  border: 2px solid white;
-  /* background-color: aqua; */
   margin-top: 10px;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 100%;
-  min-width: 500px;
-  justify-content: center;
-  align-items: center;
 }
 
 .detail_wrap_comment_idPwd {
@@ -225,8 +221,8 @@ footer {
 }
 
 #detailReviewContent {
-  width: 500px;
-  height: 50px;
+  width: 100%;
+  min-height: 80px;
 }
 
 .detail_review_userId {
@@ -262,8 +258,9 @@ footer {
   border-radius: 4px;
 }
 
-.detail_review_content {
-  color: white;
+.detail_wrap_bottom {
+  display: flex;
+  justify-content: space-between;
 }
 
 #detailReviewResetBtn {
