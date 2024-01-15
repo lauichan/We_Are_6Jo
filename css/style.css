@@ -55,6 +55,7 @@ img {
 body {
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
   color: white;
   background-color: black;
   line-height: 1.6;
@@ -238,7 +239,6 @@ footer {
 
 .rightSide > .detail_movie_appreciate {
   display: flex;
-  scroll-behavior: smooth;
   justify-content: flex-end;
   margin-top: 80px;
 }
@@ -275,7 +275,13 @@ footer {
   gap: 0.5rem;
 }
 
-#detailCommentReviewWrap i {
+.detail_comment_wrap_list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.detail_comment_wrap_list > . #detailCommentReviewWrap i {
   font-size: 25px;
   display: flex;
   justify-content: center;
@@ -381,6 +387,20 @@ footer {
   flex-direction: column;
   padding: 10px;
   border-radius: 5px;
+}
+
+/* 리뷰창 ID */
+.detail_comment_list_img > .detail_comment_list_user > .detail_comment_list_user_id {
+  font-family: ;
+  font-size: 1.5rem;
+  gap: 0.5rem;
+}
+
+/* 리뷰창 Pwd */
+.detail_comment_list_img > .detail_comment_list_user > .detail_comment_list_user_text {
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
 }
 
 .detail_comment_list_img > .starAndBtn {
