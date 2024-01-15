@@ -6,10 +6,12 @@ console.log(id);
 
 async function load() {
   await loadGenre();
+  loadReview();
   return moviePage(id);
 }
 
 load();
+
 const form = document.getElementById("detailCommentReviewWrap");
 const userId = document.getElementById("detailReviewUserId");
 const userPwd = document.getElementById("detailReviewUserPwd");
@@ -87,6 +89,3 @@ function deleteReview() {
     window.localStorage.removeItem(id);
   }
 }
-
-// 페이지 로드시에 loadAndDisplay 함수 호출
-window.addEventListener("load", loadReview);
