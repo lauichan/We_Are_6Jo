@@ -180,7 +180,6 @@ footer {
 .detail_movie_title {
   font-weight: bold;
   font-size: 2rem;
-  font-family: "LINESeedKR-Bd";
 }
 
 .container > #moviePost {
@@ -232,7 +231,7 @@ footer {
 .detail_comment {
   display: flex;
   flex-direction: column;
-  border: 1px solid white;
+  border: 2px solid white;
   padding: 10px;
   border-radius: 4px;
 }
