@@ -45,11 +45,11 @@ export function handleClickCard(event) {
 
 export async function loadPost({ id, backdrop_path, title, release_date, genres, overview, vote_average }) {
   let dataLoad = `
-  <main class="detail_main">
+  <div class="detail_main">
     <div class="detail_bg">
       <img src="https://image.tmdb.org/t/p/original${backdrop_path}" alt="영화이미지" class="detail_bg_img"/>
     </div>
-  </main>
+  </div>
   <section class="detail_section">
     <h1 class="detail_movie_title">${title}</h1>
     <div class="detail_movie_wrap_two" id="${id}">
