@@ -64,10 +64,6 @@ header a {
   margin-top: 3px;
 }
 
-.brand > img {
-  margin-top: 3px;
-}
-
 #search {
   position: relative;
 }
@@ -133,6 +129,7 @@ main {
 }
 
 #movies > div img {
+  position: relative;
   width: 100%;
   height: auto;
 }
@@ -308,4 +305,20 @@ footer {
   border: none;
   background-color: #343434;
   color: white;
+}
+
+.detail_comment_list_img {
+  /* background-color: #84868d; */
+  margin-top: 14px;
+  border: 1px solid white;
+}
+
+#deleteReview {
+  margin-left: 1100px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border-color: white;
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
 }
