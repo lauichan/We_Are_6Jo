@@ -378,11 +378,13 @@ footer {
   padding: 10px;
 }
 
-.detail_comment_list_img > .detail_comment_list_user_star {
+.detail_comment_list_img > .starAndBtn {
   display: flex;
   justify-content: space-between;
 }
 
+.detail_comment_list_user_star {
+}
 #deleteReview {
   display: flex;
   margin-bottom: 10px;
