@@ -8,6 +8,8 @@
   --movie-genreComedy-color: goldenrod;
   --movie-genreAction-color: orangered;
   --movie-genreFantasy-color: violet;
+  --movie-genreFamily-color: olive;
+  --movie-genreThriller-color: #800020;
 }
 
 @font-face {
@@ -192,7 +194,6 @@ footer {
   justify-content: space-between;
   padding-top: 5rem;
   margin-bottom: 5rem;
-  font-family: "LINESeedKR-Bd";
 }
 
 .detail_section > .leftSide {
@@ -231,7 +232,7 @@ footer {
 .detail_comment {
   display: flex;
   flex-direction: column;
-  border: 2px solid white;
+  border: 1px solid white;
   padding: 10px;
   border-radius: 4px;
 }
@@ -349,5 +350,86 @@ footer {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  padding-left: 4px;
+  padding-left: 2px;
+  margin-top: 10px;
+}
+
+.comedy {
+  background-color: var(--movie-genreComedy-color);
+  width: 70px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding-left: 2px;
+  margin-top: 10px;
+}
+
+.animation {
+  background-color: var(--movie-genreAnimation-color);
+  width: 80px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding-left: 2px;
+  margin-top: 10px;
+}
+
+.drama {
+  background-color: var(--movie-genreDrama-color);
+  width: 70px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding-left: 6px;
+  margin-top: 10px;
+}
+
+.family {
+  background-color: var(--movie-genreFamily-color);
+  width: 70px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding-left: 6px;
+  margin-top: 10px;
+}
+
+.fantasy {
+  background-color: var(--movie-genreFantasy-color);
+  width: 70px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding-left: 6px;
+  margin-top: 10px;
+}
+
+.thriller {
+  background-color: var(--movie-genreThriller-color);
+  width: 70px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding-left: 6px;
+  margin-top: 10px;
+}
+
+.action {
+  background-color: var(--movie-genreAction-color);
+  width: 70px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding-left: 6px;
+  margin-top: 10px;
+}
+
+.romance {
+  background-color: var(--movie-genreRomance-color);
+  width: 80px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding-left: 6px;
+  margin-top: 10px;
 }
