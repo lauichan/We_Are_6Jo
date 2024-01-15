@@ -122,3 +122,7 @@ footer {
   font-weight: bold;
   font-size: 2rem;
 }
+
+.detail_movie_appreciate {
+  scroll-behavior: smooth;
+}
