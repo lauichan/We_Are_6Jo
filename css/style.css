@@ -60,6 +60,7 @@ header a {
   font-weight: bold;
   font-size: 1.4rem;
   text-decoration: none;
+  margin-top: 3px;
 }
 
 #search {
