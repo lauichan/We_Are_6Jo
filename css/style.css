@@ -60,6 +60,12 @@ img {
   height: auto;
 }
 
+.brand img {
+  width: 80%;
+  border: 1px solid coral;
+  margin-top: 50px;
+}
+
 body {
   display: flex;
   flex-direction: column;
