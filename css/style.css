@@ -264,7 +264,6 @@ footer {
 .rightSide > .detail_movie_appreciate {
   display: flex;
   font-family: MBC1961M;
-
   justify-content: flex-end;
   margin-top: 80px;
   text-align: right;
