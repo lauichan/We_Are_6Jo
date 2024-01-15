@@ -10,6 +10,8 @@
   --movie-genreFantasy-color: violet;
   --movie-genreFamily-color: olive;
   --movie-genreThriller-color: #800020;
+  --movie-genreHorror-color: darkmagenta;
+  --movie-genreMystery-color: navy;
 }
 
 @font-face {
@@ -479,6 +481,26 @@ footer {
 
 .war {
   background-color: cadetblue;
+  width: 80px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding-left: 6px;
+  margin-top: 10px;
+}
+
+.horror {
+  background-color: var(--movie-genreHorror-color);
+  width: 80px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding-left: 6px;
+  margin-top: 10px;
+}
+
+.mystery {
+  background-color: var(--movie-genreMystery-color);
   width: 80px;
   align-items: center;
   justify-content: center;
