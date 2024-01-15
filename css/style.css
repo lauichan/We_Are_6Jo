@@ -113,11 +113,7 @@ main {
 
 #movies .card {
   width: 300px;
-  height: 169px;
   position: relative;
-  border-radius: 5px;
-  overflow: hidden;
-  background-color: gray;
 }
 
 #movies > div:hover {
@@ -131,6 +127,7 @@ main {
   position: relative;
   width: 100%;
   height: auto;
+  border-radius: 5px;
 }
 
 #movies > div .over {
@@ -197,15 +194,16 @@ footer {
 
 .detail_comment_review_wrap {
   display: flex;
-  flex-direction: row;
-}
-
-.detail_comment .detail_comment_review_wrap {
-  display: flex;
+  border: 2px solid white;
+  /* background-color: aqua; */
+  margin-top: 10px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  min-width: 500px;
   justify-content: center;
   align-items: center;
 }
-
 .detail_wrap_comment_idPwd {
   display: flex;
 }
@@ -228,17 +226,6 @@ footer {
 #detailReviewContent {
   width: 500px;
   height: 50px;
-}
-
-.detail_comment_review_wrap {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  background-color: green;
-  width: 100%;
-  min-width: 500px;
-  justify-content: center;
-  align-items: center;
 }
 
 .detail_review_userId {
@@ -265,10 +252,33 @@ footer {
   resize: none;
 }
 
-.detailReviewStar {
+#detailReviewStar {
   color: #343434;
+  padding: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  border-radius: 4px;
 }
 
 .detail_review_content {
   color: white;
+}
+
+#detailReviewResetBtn {
+  border-radius: 5px;
+  padding: 10px;
+  border-color: white;
+  background-color: transparent;
+  color: white;
+}
+#detailReviewSubmitBtn {
+  border-radius: 5px;
+
+  padding: 10px;
+  border-color: white;
+  background-color: transparent;
+  color: white;
+  margin-bottom: 19px;
+  margin-left: 400px;
 }
