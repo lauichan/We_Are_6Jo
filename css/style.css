@@ -276,9 +276,23 @@ footer {
   height: 35px;
   border-radius: 4px;
   padding: 0.5rem;
-  background-color: #343434;
   color: white;
   border: none;
+}
+
+#detailReviewUserId {
+  background: url("https://api.iconify.design/fa6-regular/address-card.svg?color=white") no-repeat left 0.5rem center /
+    contain;
+  background-size: 20px 20px;
+  background-color: #343434;
+  padding-left: 2.3rem;
+}
+
+#detailReviewUserPwd {
+  background: url("https://api.iconify.design/fa6-solid/lock.svg?color=white") no-repeat left 0.5rem center / contain;
+  background-size: 18px 18px;
+  background-color: #343434;
+  padding-left: 2.3rem;
 }
 
 #detailReviewContent {
@@ -475,9 +489,4 @@ footer {
   border-radius: 5px;
   padding-left: 6px;
   margin-top: 10px;
-}
-
-#deleteReview {
-  margin-left: 800px;
-  margin-bottom: 15px;
 }
