@@ -256,14 +256,18 @@ footer {
 }
 
 .rightSide > .detail_movie_appreciate {
-  display: flex;
-  justify-content: flex-end;
+  display: inline;
+  /* justify-content: flex-end; */
   margin-top: 80px;
+  text-align: right;
+  text-decoration: none;
 }
 
 .rightSide > .detail_movie_appreciate:hover {
   color: rgba(255, 0, 0, 0.692);
   transition: all 0.5s;
+  background-color: #343434;
+  width: 200px;
 }
 
 .detail_comment {
