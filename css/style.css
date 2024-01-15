@@ -25,6 +25,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -128,6 +135,11 @@ main {
   background: #f9f9f9;
 }
 
+#movies .card .over .title {
+  font-family: "GmarketSansMedium";
+  font-weight: 100;
+}
+
 #movies > div:hover {
   transform: scale(1.1);
   transition: transform 0.3s;
@@ -201,7 +213,6 @@ footer {
   flex-direction: column;
   min-width: 400px;
   padding-left: 40px;
-  padding-right: 60px;
 }
 
 .leftSide > .detail_comment {
@@ -252,12 +263,10 @@ footer {
   margin-top: 10px;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
 .detail_wrap_comment_idPwd {
   display: flex;
-  gap: 0.5rem;
 }
 
 #detailCommentReviewWrap i {
@@ -272,16 +281,27 @@ footer {
 #detailReviewUserPwd {
   width: 210px;
   height: 35px;
+  margin: 7px;
   border-radius: 4px;
   padding: 0.5rem;
-  background-color: #343434;
-  color: white;
-  border: none;
 }
 
 #detailReviewContent {
   width: 100%;
   min-height: 80px;
+}
+
+.detail_review_userId {
+  flex-direction: column;
+  background-color: #343434;
+  color: white;
+  border: none;
+}
+
+.detail_review_userPwd {
+  background-color: #343434;
+  color: white;
+  border: none;
 }
 
 .detail_review_text {
@@ -326,35 +346,13 @@ footer {
 
 .detail_comment_list_img {
   /* background-color: #84868d; */
-  margin-top: 2rem;
+  margin-top: 14px;
   border: 1px solid white;
-}
-
-.detail_comment_list_img > .detail_comment_list_user {
-  font-size: 1.2rem;
-  margin-left: 1rem;
-  padding-top: 1rem;
-}
-
-.detail_comment_list_img > .detail_comment_list_user > .detail_comment_list_user_id {
-  font-size: 1.5rem;
-  margin-left: 0.3rem;
-}
-
-.detail_comment_list_img > .detail_comment_list_user > .detail_comment_list_user_text {
-  margin-left: 0.5rem;
-  padding-top: 0.5rem;
-}
-
-.detail_comment_list_img > .detail_comment_list_user > .detail_comment_list_user_star {
   display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
 }
 
 #deleteReview {
   display: flex;
-  justify-content: flex-end;
   /* margin-left: 1100px; */
   margin-bottom: 10px;
   background-color: transparent;
@@ -364,7 +362,7 @@ footer {
   padding: 10px;
 }
 
-/* 장르별 디자인 */
+/* crime */
 .crime {
   background-color: var(--movie-genreCrim-color);
   width: 50px;
