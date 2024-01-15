@@ -288,4 +288,10 @@ footer {
 
 .detail_comment_list_img {
   background-color: #84868d;
+  margin-top: 14px;
+}
+
+.detail_comment_list_img > .detail_comment_list_user > .detail_review_userId,
+.detail_comment_list_img > .detail_comment_list_user > .detail_review_text {
+  padding-left: 10px;
 }
