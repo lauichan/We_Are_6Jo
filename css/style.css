@@ -163,3 +163,7 @@ footer {
   flex-direction: column;
   margin: 50px auto 40px auto;
 }
+
+.detail_movie_appreciate {
+  scroll-behavior: smooth;
+}
