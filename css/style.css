@@ -227,8 +227,13 @@ footer {
   min-width: 500px;
   justify-content: center;
   align-items: center;
+  margin: 100px;
 }
 
+.detail_comment_review_wrap div {
+  background-color: aqua;
+  margin: 10px;
+}
 .detail_review_userId {
   flex-direction: column;
   background-color: #343434;
