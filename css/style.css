@@ -440,6 +440,12 @@ footer {
   background-color: #343434;
   color: white;
   font-size: 100%;
+  border-color: #141517;
+  background-color: #141517;
+}
+
+#deleteReview:hover {
+  cursor: pointer;
 }
 
 .genre {
