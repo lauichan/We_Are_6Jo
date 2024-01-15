@@ -64,6 +64,10 @@ header a {
   margin-top: 3px;
 }
 
+.brand > img {
+  margin-top: 3px;
+}
+
 #search {
   position: relative;
 }
@@ -129,7 +133,6 @@ main {
 }
 
 #movies > div img {
-  position: relative;
   width: 100%;
   height: auto;
 }
