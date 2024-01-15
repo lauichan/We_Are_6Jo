@@ -56,7 +56,7 @@ function loadReview() {
   Object.entries(ReviewList).forEach(([reviewId, review]) => {
     const entryHtml = `
     <li id=${reviewId}>
-      <div class="detail_comment_list_img">
+      <div class="detail_comment_list">
         <div class="detail_comment_list_user">
           <div class="detail_comment_list_user_id" id="userId">${review.userName}</div>
           <div class="detail_comment_list_user_text" id="userInputComment">${review.content}</div>

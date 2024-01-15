@@ -328,7 +328,7 @@ footer {
 #detailReviewContent {
   width: 100%;
   min-height: 100px;
-  font-size: 100%;
+  font-size: 110%;
 }
 
 .detail_review_userId {
@@ -395,7 +395,7 @@ footer {
   border: 1px solid white;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 1rem;
   border-radius: 5px;
 }
 
