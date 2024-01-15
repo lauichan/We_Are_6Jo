@@ -252,6 +252,7 @@ footer {
   border: 1px solid white;
   padding: 10px;
   border-radius: 4px;
+  margin-bottom: 5rem;
 }
 
 .detail_comment_title {
@@ -354,17 +355,25 @@ footer {
   margin-top: 14px;
   border: 1px solid white;
   display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.detail_comment_list_img > .detail_comment_list_user_star {
+  display: flex;
+  justify-content: space-between;
 }
 
 #deleteReview {
   display: flex;
-  /* margin-left: 1100px; */
   margin-bottom: 10px;
-  background-color: transparent;
-  border-color: white;
-  border: 1px solid white;
-  color: white;
   padding: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  background-color: #343434;
+  color: white;
+  font-size: 100%;
 }
 
 /* crime */
