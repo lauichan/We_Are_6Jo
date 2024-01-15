@@ -27,11 +27,6 @@
   box-sizing: border-box;
 }
 
-h1 {
-  font-family: LINESeedKR;
-  letter-spacing: 0.1rem;
-}
-
 a {
   color: inherit;
 }
@@ -197,7 +192,12 @@ footer {
   align-items: center;
 }
 
-.detail_comment_review_wrap > .detail_review_userId ~ .detail_review_userPwd {
+.detail_review_userId {
+  flex-direction: column;
+  background-color: #343434;
+}
+
+.detail_review_userPwd {
   background-color: #343434;
 }
 
