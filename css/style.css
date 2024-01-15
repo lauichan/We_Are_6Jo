@@ -64,10 +64,6 @@ header a {
   margin-top: 3px;
 }
 
-.brand > img {
-  margin-top: 3px;
-}
-
 #search {
   position: relative;
 }
@@ -133,6 +129,7 @@ main {
 }
 
 #movies > div img {
+  position: relative;
   width: 100%;
   height: auto;
 }
@@ -295,11 +292,17 @@ footer {
 }
 
 .detail_comment_list_img {
-  background-color: #84868d;
+  /* background-color: #84868d; */
   margin-top: 14px;
+  border: 1px solid white;
 }
 
-.detail_review_userId,
-.detail_comment_list_img > .detail_comment_list_user > .detail_review_text {
-  padding-left: 10px;
+#deleteReview {
+  margin-left: 1100px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border-color: white;
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
 }
