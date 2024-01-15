@@ -148,7 +148,7 @@ main {
 
 #movies .card .over .title {
   font-family: "GmarketSansMedium";
-  font-weight: 100;
+  font-weight: normal;
 }
 
 #movies > div:hover {
