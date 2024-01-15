@@ -463,3 +463,23 @@ footer {
   padding-left: 6px;
   margin-top: 10px;
 }
+
+.history {
+  background-color: aqua;
+  width: 80px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding-left: 6px;
+  margin-top: 10px;
+}
+
+.war {
+  background-color: cadetblue;
+  width: 80px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding-left: 6px;
+  margin-top: 10px;
+}
