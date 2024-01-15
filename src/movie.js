@@ -42,11 +42,11 @@ export function handleClickCard(event) {
   const cardList = document.getElementById("movies");
   if (event.target === cardList) return;
   let target = event.target.matches("div") ? event.target : event.target.closest(".card");
-  alert(`${target.id}`);
+  alert(`${target.id}`); // 나중에 지우세요.
   location.href = `detail.html?id=${target.id}`;
 }
 
-export async function loadPost({ id, backdrop_path, title, release_date, genres, overview }) {
+export async function loadPost({ id, backdrop_path, title, release_date, genres, overview, vote_average }) {
   let dataLoad = `
   <main class="detail_main">
     <div class="detail_bg">
@@ -62,7 +62,12 @@ export async function loadPost({ id, backdrop_path, title, release_date, genres,
     <div class="detail_movie_over_view">
       <p class="detail_movie_over_view_text">${overview}</p>
     </div>
-    <button class="detail_movie_appreciate">감상하기</button>
+    <div class="detail_movie_vote">
+      <p class="detail_movie_vote_average">${vote_average}</p>
+    </div>
+    <a href ="#detail_commentView" class="detail_movie_appreciate" >리뷰 남기기</a>
+    
+    
   </section>`;
 
   document.getElementById("moviePost").insertAdjacentHTML("beforeend", dataLoad);
