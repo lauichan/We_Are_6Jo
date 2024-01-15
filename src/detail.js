@@ -1,4 +1,5 @@
 import { moviePage, loadGenre } from "./fetch.js";
+
 const id = new URL(location.href).searchParams.get("id");
 
 console.log(id);
