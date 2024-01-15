@@ -194,7 +194,18 @@ footer {
   justify-content: space-between;
 }
 
-.detail_comment {
+.detail_section > .leftSide {
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+}
+
+.detail_section > .rightSide {
+  display: flex;
+  flex-direction: column;
+}
+
+.leftSide > . .detail_comment {
   font-family: "LINESeedKR-Bd";
   display: flex;
   flex-direction: column;
