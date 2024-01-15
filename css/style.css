@@ -37,13 +37,11 @@ header {
   background-color: #141517;
   height: 50px;
   padding: 0 20px;
-
-  /* 페이지 고정 */
-  left: 0;
   top: 0;
   position: sticky;
+  position: sticky;
   width: 100%;
-  z-index: 11;
+  z-index: 10;
 }
 
 .container {
@@ -86,19 +84,15 @@ main {
   border-radius: 5px;
 }
 
-/* 지연 */
-#movies > div:hover .over {
-  display: block;
-  max-width: 300px;
-}
-
 #movies > div .over {
+  display: flex;
+  flex-direction: column-reverse;
   position: absolute;
-  left: 1rem;
-  bottom: 1rem;
-  display: none;
+  left: 0;
+  top: 0;
   width: 100%;
-  background-color: green;
+  height: 100%;
+  padding: 1rem;
 }
 
 #movies > div .title {

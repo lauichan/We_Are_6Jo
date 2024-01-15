@@ -6,7 +6,6 @@ export function createCard(response) {
   let html = "";
   movies.forEach((movie) => (html += renderCardHTML(movie)));
   document.getElementById("movies").insertAdjacentHTML("beforeend", html);
-  movies.forEach((movie) => createGenreList(movie.id, movie.genre_ids));
 }
 
 function renderCardHTML(movie) {
