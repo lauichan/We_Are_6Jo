@@ -124,9 +124,3 @@ footer {
   font-weight: bold;
   font-size: 2rem;
 }
-
-section {
-  margin: 30px auto 30px auto;
-  display: flex;
-  flex-direction: column;
-}
