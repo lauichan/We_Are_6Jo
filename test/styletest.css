@@ -187,41 +187,6 @@ footer {
   flex-direction: column;
   margin: 50px auto 40px auto;
 }
-.detail_comment {
-  display: flex;
-  flex-direction: column;
-}
-
-.detail_comment_review_wrap {
-  display: flex;
-
-  background-color: aqua;
-  margin-top: 10px;
-}
-
-.detail_wrap_comment_idPwd {
-  display: flex;
-}
-
-#detailCommentReviewWrap i {
-  font-size: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3px;
-}
-
-#detailReviewUserId,
-#detailReviewUserPwd {
-  width: 210px;
-  height: 35px;
-  margin: 7px;
-}
-
-#detailReviewContent {
-  width: 500px;
-  height: 35px;
-}
 
 .detail_comment_review_wrap {
   display: flex;
@@ -260,5 +225,4 @@ footer {
 }
 
 .detail_review_content {
-  color: white;
 }
