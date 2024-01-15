@@ -199,6 +199,7 @@ footer {
   flex-direction: column;
   min-width: 400px;
   padding-left: 40px;
+  padding-right: 60px;
 }
 
 .leftSide > .detail_comment {
