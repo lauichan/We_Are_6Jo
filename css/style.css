@@ -225,7 +225,7 @@ footer {
   display: flex;
   flex-direction: column;
   min-width: 400px;
-  padding-left: 40px;
+  padding: 1.5rem;
 }
 
 .leftSide > .detail_comment {
@@ -243,7 +243,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 50px 0 50px 0;
+  padding: 3.5rem 1.5rem;
   font-size: 1.3rem;
 }
 
