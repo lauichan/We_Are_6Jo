@@ -10,6 +10,8 @@
   --movie-genreFantasy-color: violet;
   --movie-genreFamily-color: olive;
   --movie-genreThriller-color: #800020;
+  --movie-genreHorror-color: darkmagenta;
+  --movie-genreMystery-color: navy;
 }
 
 @font-face {
