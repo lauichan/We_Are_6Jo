@@ -61,7 +61,8 @@ function loadReview() {
           <div class="detail_comment_list_user_id" id="userId">${review.userName}</div>
           <div class="detail_comment_list_user_text" id="userInputComment">${review.content}</div>
         </div>
-        <div class="detail_comment_list_user_star" id="userInputStar">${review.star}
+        <div class ="starAndBtn">
+          <div class="detail_comment_list_user_star" id="userInputStar">${review.star}</div>
           <button id="deleteReview" >삭제</button>
         </div>
       </div>
