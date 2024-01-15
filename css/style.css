@@ -430,6 +430,10 @@ footer {
   background-color: var(--movie-genreFamily-color);
 }
 
+.adventure {
+  background-color: var(--movie-genreAdventure-color);
+}
+
 .fantasy {
   background-color: var(--movie-genreFantasy-color);
 }
@@ -460,4 +464,14 @@ footer {
 
 .mystery {
   background-color: var(--movie-genreMystery-color);
+}
+
+.music {
+  background-color: ;
+}
+
+.sciencefiction {
+}
+
+.western {
 }
