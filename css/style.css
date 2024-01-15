@@ -267,7 +267,7 @@ footer {
   margin-top: 10px;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .detail_wrap_comment_idPwd {
