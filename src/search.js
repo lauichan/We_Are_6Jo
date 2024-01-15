@@ -3,9 +3,9 @@ import { searchPage, loadGenre } from "./fetch.js";
 import { handleClickCard } from "./movie.js";
 
 let currentPage = 1;
+const keyword = new URL(location.href).searchParams.get("query");
 
 async function load() {
-  const keyword = new URL(location.href).searchParams.get("query");
   await loadGenre();
   searchPage(currentPage, keyword);
 }
