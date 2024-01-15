@@ -386,133 +386,66 @@ footer {
   padding: 10px;
 }
 
+.genre {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.genre li {
+  border-radius: 5px;
+  padding: 0.1rem 0.3rem;
+}
+
 /* crime */
 .crime {
   background-color: var(--movie-genreCrim-color);
-  width: 50px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  padding-left: 2px;
-  margin-top: 10px;
 }
 
 .comedy {
   background-color: var(--movie-genreComedy-color);
-  width: 70px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  padding-left: 2px;
-  margin-top: 10px;
 }
 
 .animation {
   background-color: var(--movie-genreAnimation-color);
-  width: 80px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  padding-left: 2px;
-  margin-top: 10px;
 }
 
 .drama {
   background-color: var(--movie-genreDrama-color);
-  width: 70px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  padding-left: 6px;
-  margin-top: 10px;
 }
 
 .family {
   background-color: var(--movie-genreFamily-color);
-  width: 70px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  padding-left: 6px;
-  margin-top: 10px;
 }
 
 .fantasy {
   background-color: var(--movie-genreFantasy-color);
-  width: 70px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  padding-left: 6px;
-  margin-top: 10px;
 }
 
 .thriller {
   background-color: var(--movie-genreThriller-color);
-  width: 70px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  padding-left: 6px;
-  margin-top: 10px;
 }
 
 .action {
   background-color: var(--movie-genreAction-color);
-  width: 70px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  padding-left: 6px;
-  margin-top: 10px;
 }
 
 .romance {
   background-color: var(--movie-genreRomance-color);
-  width: 80px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  padding-left: 6px;
-  margin-top: 10px;
 }
 
 .history {
   background-color: aqua;
-  width: 80px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  padding-left: 6px;
-  margin-top: 10px;
 }
 
 .war {
   background-color: cadetblue;
-  width: 80px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  padding-left: 6px;
-  margin-top: 10px;
 }
 
 .horror {
   background-color: var(--movie-genreHorror-color);
-  width: 80px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  padding-left: 6px;
-  margin-top: 10px;
 }
 
 .mystery {
   background-color: var(--movie-genreMystery-color);
-  width: 80px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  padding-left: 6px;
-  margin-top: 10px;
 }
