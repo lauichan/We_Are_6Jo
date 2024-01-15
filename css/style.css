@@ -14,24 +14,33 @@
   --movie-genreMystery-color: navy;
   --layer-line-color: #ffffff38;
   --layer-background-color: #343434;
+
+  --font-MBC1961M: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961M.woff2") format("woff2");
+  --font-LINESeedKR-Bd: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2")
+    format("woff2");
+  --font-GmarketSansMedium: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+
+  /* Add other global variables here */
 }
 
 @font-face {
   font-family: "MBC1961M";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961M.woff2") format("woff2");
+  src: var(--font-MBC1961M);
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "LINESeedKR-Bd";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2") format("woff2");
+  src: var(--font-LINESeedKR-Bd);
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GmarketSansMedium";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  src: var(--font-GmarketSansMedium);
   font-weight: normal;
   font-style: normal;
 }
