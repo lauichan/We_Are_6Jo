@@ -6,9 +6,13 @@ let urls = "https://api.themoviedb.org/3/";
 export let genreList;
 
 export async function loadJSON(url) {
-  const response = await fetch(url);
-  const data = await response.json();
-  return data;
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    alert("서버에서 데이터를 불러올수 없습니다.");
+  }
 }
 
 export async function loadGenre() {
