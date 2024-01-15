@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>detail page by</title>
+
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <script type="module" src="src/detail.js"></script>
     <script src="https://kit.fontawesome.com/7423cdffa2.js" crossorigin="anonymous"></script>
+
     <title>detail page by</title>
   </head>
   <body>
@@ -29,7 +31,7 @@
         <div class="detail_comment_title">영화 사용자 감상평</div>
         <!--댓글 창 만들기-->
         <form class="detail_comment_review_wrap" id="detailCommentReviewWrap">
-          <div>
+          <div class="detail_wrap_comment_idPwd">
             <i class="fa-regular fa-id-card"></i>
             <input type="text" class="detail_review_userId" id="detailReviewUserId" placeholder="아이디" required />
             <i class="fa-solid fa-lock"></i>
@@ -42,7 +44,7 @@
             />
           </div>
 
-          <div>
+          <div class="detail_wrap_star_btn">
             <div class="detail_review_content">
               <textarea class="detail_review_text" id="detailReviewContent" maxlength="50" required></textarea><br />
               <select class="detail_review_star" id="detailReviewStar" required>
@@ -54,8 +56,9 @@
                 <option value="⭐️">⭐️</option>
               </select>
             </div>
-            <button type="reset" id="detailReviewResetBtn">취소</button>
+
             <button type="submit" id="detailReviewSubmitBtn">저장</button>
+            <button type="reset" id="detailReviewResetBtn">취소</button>
           </div>
         </form>
 
