@@ -113,11 +113,7 @@ main {
 
 #movies .card {
   width: 300px;
-  height: 169px;
   position: relative;
-  border-radius: 5px;
-  overflow: hidden;
-  background-color: gray;
 }
 
 #movies > div:hover {
@@ -131,6 +127,7 @@ main {
   position: relative;
   width: 100%;
   height: auto;
+  border-radius: 5px;
 }
 
 #movies > div .over {
@@ -190,35 +187,6 @@ footer {
   flex-direction: column;
   margin: 50px auto 40px auto;
 }
-.detail_comment {
-  display: flex;
-  flex-direction: column;
-}
-
-.detail_comment_review_wrap {
-  display: flex;
-  flex-direction: row;
-}
-
-#detailCommentReviewWrap > i {
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3px;
-}
-
-#detailReviewUserId,
-#detailReviewUserPwd {
-  width: 210px;
-  height: 35px;
-  margin: 7px;
-}
-
-#detailReviewContent {
-  width: 500px;
-  height: 35px;
-}
 
 .detail_comment_review_wrap {
   display: flex;
@@ -257,5 +225,4 @@ footer {
 }
 
 .detail_review_content {
-  color: white;
 }
