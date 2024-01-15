@@ -333,7 +333,8 @@ footer {
 #detailReviewUserId,
 #detailReviewUserPwd {
   font-size: 100%;
-  width: 210px;
+  max-width: 250px;
+  width: calc(50% - 0.2rem);
   height: 35px;
   border-radius: 4px;
   padding: 0.5rem;
