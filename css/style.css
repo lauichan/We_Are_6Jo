@@ -192,6 +192,7 @@ footer {
 }
 
 .detail_comment {
+  font-family: "LINESeedKR-Bd";
   display: flex;
   flex-direction: column;
   margin: 50px auto 40px auto;
@@ -203,6 +204,10 @@ footer {
   border: 1px solid white;
   padding: 10px;
   border-radius: 4px;
+}
+
+.detail_comment_title {
+  font-size: 22px;
 }
 
 .detail_comment_review_wrap {
