@@ -200,8 +200,12 @@ footer {
   flex-direction: row;
 }
 
-#detailCommentReviewWrap > i {
-  font-size: 30px;
+.detail_wrap_comment_idPwd {
+  display: flex;
+}
+
+#detailCommentReviewWrap i {
+  font-size: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
