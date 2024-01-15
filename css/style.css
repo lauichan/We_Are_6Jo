@@ -10,6 +10,8 @@
   --movie-genreFantasy-color: violet;
   --movie-genreFamily-color: olive;
   --movie-genreThriller-color: #800020;
+  --movie-genreHistory-color: aqua;
+  --movie-genreWar-color: cadetblue;
 }
 
 @font-face {
@@ -465,7 +467,7 @@ footer {
 }
 
 .history {
-  background-color: aqua;
+  background-color: var(--movie-genreHistory-color);
   width: 80px;
   align-items: center;
   justify-content: center;
@@ -475,7 +477,7 @@ footer {
 }
 
 .war {
-  background-color: cadetblue;
+  background-color: var(--movie-genreWar-color);
   width: 80px;
   align-items: center;
   justify-content: center;
