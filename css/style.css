@@ -297,7 +297,7 @@ footer {
 }
 
 .detail_comment_title {
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 800;
 }
 
@@ -359,6 +359,7 @@ footer {
   width: 100%;
   min-height: 100px;
   font-size: 110%;
+  font-family: "LINESeedKR-Bd";
 }
 
 .detail_review_userId {
