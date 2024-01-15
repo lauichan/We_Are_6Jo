@@ -56,11 +56,11 @@ export async function loadPost({ id, backdrop_path, title, release_date, genres,
       <ul class="genre"></ul>
       <p class="detail_movie_wrap_year">${release_date}</p>
     </div>
-    <div class="detail_movie_over_view">
-      <p class="detail_movie_over_view_text">${overview}</p>
-    </div>
     <div class="detail_movie_vote">
       <p class="detail_movie_vote_average">${vote_average}</p>
+    </div>
+    <div class="detail_movie_over_view">
+      <p class="detail_movie_over_view_text">${overview}</p>
     </div>
     <a href ="#detail_commentView" class="detail_movie_appreciate" >리뷰 남기기</a>
     
