@@ -4,64 +4,108 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>detail page by</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <script type="module" src="src/detail.js"></script>
-    <script src="https://kit.fontawesome.com/7423cdffa2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/detail.css" />
+    <script type="module" src="src/_detail.js"></script>
     <title>detail page by</title>
   </head>
   <body>
-    <header>
-      <a href="/">
-        <img src="/images/logo.png" alt="" srcset="" />
-      </a>
+    <nav id="movie_detail_nav">
+      <div class="detail_nav">
+        <a href="#" class="detail_icon">1</a>
+      </div>
+      <div class="detail_nav">
+        <a href="#icon" class="detail_icon">2</a>
+      </div>
+    </nav>
 
-      <form id="search" action="search.html" method="get">
-        <input id="searchInput" type="text" name="query" placeholder="검색어를 입력해주세요." required />
-        <button id="searchBtn" type="submit">&nbsp;</button>
-      </form>
-    </header>
-
-    <main class="container">
-      <div id="moviePost"></div>
-
-      <section class="detail_comment" id="detail_commentView">
-        <div class="detail_comment_title">영화 사용자 감상평</div>
-        <!--댓글 창 만들기-->
-        <form class="detail_comment_review_wrap" id="detailCommentReviewWrap">
-          <div class="detail_wrap_comment_idPwd">
-            <i class="fa-regular fa-id-card"></i>
-            <input type="text" class="detail_review_userId" id="detailReviewUserId" placeholder="아이디" required />
-            <i class="fa-solid fa-lock"></i>
-            <input
-              type="password"
-              class="detail_review_userPwd"
-              id="detailReviewUserPwd"
-              placeholder="비밀번호"
-              required
-            />
-          </div>
-
-          <div class="detail_wrap_star_btn">
-            <div class="detail_review_content">
-              <textarea class="detail_review_text" id="detailReviewContent" maxlength="50" required></textarea><br />
-              <select class="detail_review_star" id="detailReviewStar" required>
-                <option selected value="" hidden>별점을 남겨주세요</option>
-                <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
-                <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
-                <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
-                <option value="⭐️⭐️">⭐️⭐️</option>
-                <option value="⭐️">⭐️</option>
-              </select>
-            </div>
-
-            <button type="submit" id="detailReviewSubmitBtn">저장</button>
+    <!--nav로 태그를 할지 header로 태그를 할지-->
+    <div id="moviePost">
+      <!-- <main class="detail_main"> 
+        <div class="detail_bg">
+          <img src="#" alt="영화이미지" class="detail_bg_img" />
+        </div>
+      </main>
+      <section class="detail_section">
+        <h1 class="detail_movie_title">영화 제목</h1>
+        <div class="detail_movie_wrap_two">
+          <span class="detail_movie_wrap_time_genre">코미디</span>
+          <p class="detail_movie_wrap_year">2023</p>
+        </div>
+        <div class="detail_movie_over_view">
+          <p class="detail_movie_over_view_text">영화의 내용을 입력한다</p>
+        </div>
+        <button class="detail_movie_appreciate">감상하기</button>
+      </section> -->
+    </div>
+    <section class="detail_comment">
+      <div class="detail_comment_title">영화 사용자 감상평</div>
+      <!--댓글 창 만들기-->
+      <form class="detail_comment_review_wrap" id="detailCommentReviewWrap">
+        <input type="text" class="detail_review_userId" id="detailReviewUserId" placeholder="아이디" />
+        <input type="password" class="detail_review_userPwd" id="detailReviewUserPwd" placeholder="비밀번호" />
+        <div class="detail_review_content">
+          <textarea class="detail_review_text" id="detailReviewContent"></textarea><br />
+        </div>
+        <div class="detail_review_bottom">
+          <select class="detail_review_star" id="detailReviewStar" required>
+            <option selected value="" placeholder="별점을 남겨주세요"></option>
+            <option value="⭐️">⭐️</option>
+            <option value="⭐️⭐️">⭐️⭐️</option>
+            <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+            <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+            <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+          </select>
+          <div class="detail_view_submit">
             <button type="reset" id="detailReviewResetBtn">취소</button>
+            <button type="submit" id="detailReviewSubmitBtn">저장</button>
           </div>
-        </form>
-
-        <ul class="detail_comment_wrap_list" id="movieReview"></ul>
-      </section>
-    </main>
+        </div>
+      </form>
+      <ul class="detail_comment_wrap_list" id="movieReview">
+        <!--댓글들 데이터 받아와서 붙이기-->
+        <!-- <li>
+          <div class="detail_comment_list_img">
+            <img src="#list_img" alt="댓글다는 사용자 사진" />
+            <div class="detail_comment_list_user">
+              <div class="detail_comment_list_user_id" id="userId">사용자 id</div>
+              <div class="detail_comment_list_user_text" id="userInputComment">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla dolorem inventore amet repellat magni
+                iusto, culpa natus sit quibusdam fuga commodi dolores iste tenetur cumque minima voluptas ea quaerat
+                placeat!
+              </div>
+              <div class="detail_comment_list_user_star" id="userInputStar">⭐️⭐️⭐️⭐️⭐️</div>
+            </div>
+          </div>
+        </li> -->
+        <!-- <li>
+          <div class="detail_comment_list_img">
+            <img src="#list_img" alt="댓글다는 사용자 사진" />
+            <div class="detail_comment_list_user">
+              <div class="detail_comment_list_user_id" id="userId">사용자 id</div>
+              <div class="detail_comment_list_user_text" id="userInputComment">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla dolorem inventore amet repellat magni
+                iusto, culpa natus sit quibusdam fuga commodi dolores iste tenetur cumque minima voluptas ea quaerat
+                placeat!
+              </div>
+              <div class="detail_comment_list_user_star" id="userInputStar">⭐️⭐️⭐️⭐️⭐️</div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="detail_comment_list_img">
+            <img src="#list_img" alt="댓글다는 사용자 사진" />
+            <div class="detail_comment_list_user">
+              <div class="detail_comment_list_user_id" id="userId">사용자 id</div>
+              <div class="detail_comment_list_user_text" id="userInputComment">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla dolorem inventore amet repellat magni
+                iusto, culpa natus sit quibusdam fuga commodi dolores iste tenetur cumque minima voluptas ea quaerat
+                placeat!
+              </div>
+              <div class="detail_comment_list_user_star" id="userInputStar">⭐️⭐️⭐️⭐️⭐️</div>
+            </div>
+          </div>
+        </li> -->
+      </ul>
+    </section>
   </body>
 </html>
