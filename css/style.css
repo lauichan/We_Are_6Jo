@@ -185,8 +185,26 @@ footer {
 }
 
 .detail_comment_review_wrap {
+  display: flex;
+  flex-direction: column;
   background-color: green;
-  width: 1260px;
+  min-width: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail_comment_review_wrap > .detail_review_userId ~ .detail_review_userPwd {
+  background-color: #343434;
+}
+
+.detail_review_text {
+  border: none;
+  background-color: #343434;
+  padding: 0.5rem 0.7rem;
+  border-radius: 4px;
+  min-width: 300px;
+  color: white;
+  font-size: 100%;
 }
 
 .detail_movie_appreciate {
