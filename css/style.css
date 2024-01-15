@@ -195,7 +195,7 @@ footer {
 .detail_comment_review_wrap {
   display: flex;
 
-  background-color: aqua;
+  /* background-color: aqua; */
   margin-top: 10px;
 }
 
@@ -226,7 +226,7 @@ footer {
 .detail_comment_review_wrap {
   display: flex;
   flex-direction: column;
-  background-color: green;
+  /* background-color: green; */
   min-width: 500px;
   justify-content: center;
   align-items: center;
@@ -255,10 +255,24 @@ footer {
   font-size: 100%;
 }
 
-.detailReviewStar {
+#detailReviewStar {
   color: #343434;
+  padding: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 355px;
+  border-radius: 4px;
 }
 
 .detail_review_content {
+  color: white;
+}
+
+#detailReviewResetBtn,
+#detailReviewSubmitBtn {
+  border-radius: 5px;
+  padding: 10px;
+  border-color: white;
+  background-color: transparent;
   color: white;
 }
