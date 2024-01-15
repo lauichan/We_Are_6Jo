@@ -150,7 +150,6 @@ main {
 }
 
 #movies > div img {
-  position: relative;
   width: 100%;
   height: auto;
 }
