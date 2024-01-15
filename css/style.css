@@ -240,6 +240,12 @@ footer {
   margin-bottom: 5rem;
 }
 
+@media (max-width: 1000px) {
+  .detail_section {
+    flex-wrap: wrap;
+  }
+}
+
 .detail_section > .leftSide {
   display: flex;
   flex-direction: column;
