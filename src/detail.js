@@ -77,7 +77,7 @@ function deleteReview() {
   let reviewId = this.closest("li").id;
   let ReviewList = JSON.parse(window.localStorage.getItem(id));
 
-  if (confirm("리뷰를 삭제하시겠습니까?") === true) {
+  if (prompt("리뷰를 삭제하시겠습니까?") === ReviewList[reviewId].pwd) {
     delete ReviewList[reviewId];
     window.localStorage.setItem(id, JSON.stringify(ReviewList));
     alert("삭제되었습니다");
