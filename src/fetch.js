@@ -35,6 +35,8 @@ export async function moviePage(movie_id) {
 }
 
 export async function searchPage(page, keyword) {
-  const data = await loadJSON(`${urls}search/movie?api_key=${apikey}&query=${keyword}&language=en-US&page=${page}`);
+  const data = await loadJSON(
+    `${urls}search/movie?api_key=${apikey}&include_adult=false&query=${keyword}&language=en-US&page=${page}`
+  );
   createCard(data);
 }
