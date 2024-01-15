@@ -182,7 +182,12 @@ footer {
   scroll-behavior: smooth;
 }
 
-.detail_section,
+.detail_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .detail_comment {
   display: flex;
   flex-direction: column;
