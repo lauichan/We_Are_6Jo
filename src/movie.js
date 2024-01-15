@@ -6,6 +6,7 @@ export function createCard(response) {
   let html = "";
   movies.forEach((movie) => (html += renderCardHTML(movie)));
   document.getElementById("movies").insertAdjacentHTML("beforeend", html);
+  checkLastPage(movies.length);
 }
 
 function renderCardHTML(movie) {
@@ -72,6 +73,7 @@ export async function loadPost({ id, backdrop_path, title, release_date, genres,
 
 export function checkLastPage(dataLength) {
   const morePageBtn = document.getElementById("morePage");
+  console.log(dataLength);
   if (dataLength < 20) {
     morePageBtn.disabled = true;
     morePageBtn.textContent = dataLength === 0 ? "검색결과가 없습니다." : "다음 페이지가 없습니다.";
