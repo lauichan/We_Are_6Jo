@@ -14,43 +14,30 @@
   --movie-genreMystery-color: navy;
   --layer-line-color: #ffffff38;
   --layer-background-color: #343434;
-
-  --font-MBC1961M: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961M.woff2") format("woff2");
-  --font-LINESeedKR-Bd: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2")
-    format("woff2");
-  --font-GmarketSansMedium: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
-    format("woff");
-
-  /* Add other global variables here */
 }
 
 @font-face {
   font-family: "MBC1961M";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961M.woff2");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961M.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "LINESeedKR-Bd";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GmarketSansMedium";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 * {
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 a {
@@ -67,16 +54,11 @@ img {
   height: auto;
 }
 
-.brand img {
-  width: 80%;
-  border: 1px solid coral;
-  margin-top: 50px;
-}
-
 body {
   display: flex;
   flex-direction: column;
-  color: #ffffffdb;
+  scroll-behavior: smooth;
+  color: white;
   background-color: black;
   line-height: 1.6;
 }
@@ -160,7 +142,7 @@ main {
 
 #movies .card .over .title {
   font-family: "GmarketSansMedium";
-  font-weight: normal;
+  font-weight: 100;
 }
 
 #movies > div:hover {
@@ -269,25 +251,19 @@ footer {
 
 .rightSide > .detail_movie_appreciate {
   display: flex;
-  font-family: MBC1961M;
-
   justify-content: flex-end;
   margin-top: 80px;
-  text-align: right;
-  text-decoration: none;
 }
 
 .rightSide > .detail_movie_appreciate:hover {
   color: rgba(255, 0, 0, 0.692);
   transition: all 0.5s;
-  background-color: #343434;
-  width: 200px;
 }
 
 .detail_comment {
   display: flex;
   flex-direction: column;
-  border: 2px solid #ffffffa3;
+  border: 2px solid white;
   padding: 10px;
   border-radius: 4px;
   margin-bottom: 5rem;
@@ -313,7 +289,7 @@ footer {
 
 .detail_comment_wrap_list {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: 1.3rem;
 }
 
@@ -376,7 +352,7 @@ footer {
   padding: 0.5rem 0.7rem;
   border-radius: 4px;
   min-width: 300px;
-  color: #ffffffdb;
+  color: white;
   font-size: 100%;
   resize: none;
 }
@@ -395,43 +371,24 @@ footer {
   align-items: center;
 }
 
-.detail_wrap_bottom > .detail_review_button {
-  display: flex;
-  gap: 0.55rem;
-}
-
 #detailReviewResetBtn {
   border-radius: 5px;
   padding: 10px;
   border: none;
   background-color: #343434;
-  color: #ffffffdb;
+  color: white;
   font-size: 100%;
-  width: 80px;
   cursor: pointer;
-}
-
-#detailReviewResetBtn:hover {
-  cursor: pointer;
-  background-color: #800020;
-  transition: all 0.3s;
 }
 
 #detailReviewSubmitBtn {
   border-radius: 5px;
   padding: 10px;
   border: none;
-  background-color: #0d6efd;
-  color: #ffffffdb;
+  background-color: #343434;
+  color: white;
   font-size: 100%;
-  width: 80px;
   cursor: pointer;
-}
-
-#detailReviewSubmitBtn:hover {
-  cursor: pointer;
-  background-color: #0a53be;
-  transition: all 0.3s;
 }
 
 .detail_comment_list {
@@ -472,16 +429,8 @@ footer {
   border-radius: 5px;
   border: none;
   background-color: #343434;
-  color: #ffffffdb;
+  color: white;
   font-size: 100%;
-  border-color: #141517;
-  background-color: #141517;
-}
-
-#deleteReview:hover {
-  cursor: pointer;
-  background-color: #800020;
-  transition: all 0.3s;
 }
 
 .genre {

@@ -41,7 +41,7 @@ export function handleClickCard(event) {
   const cardList = document.getElementById("movies");
   if (event.target === cardList) return;
   let target = event.target.closest(".card");
-  alert(`${target.id}`); // 나중에 지우세요.
+  // alert(`${target.id}`); // 나중에 지우세요.
   location.href = `detail.html?id=${target.id}`;
 }
 
