@@ -176,6 +176,17 @@ main {
   margin: 2rem 0;
 }
 
+#morePage {
+  width: 100%;
+  cursor: pointer;
+}
+
+#morePage:hover {
+  border: 1px solid #800020;
+  background-color: #800020;
+  color: #fff;
+}
+
 .page {
   padding: 0.7rem 1rem;
   min-width: 100px;
@@ -388,8 +399,6 @@ footer {
   justify-content: space-between;
 }
 
-.detail_comment_list_user_star {
-}
 #deleteReview {
   display: flex;
   margin-bottom: 10px;
