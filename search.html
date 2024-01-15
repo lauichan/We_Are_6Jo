@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="container">
-      <h1><a href="/">영화 리스트</a></h1>
-
-      <form id="search">
-        <input id="searchInput" type="text" name="query" placeholder="검색어를 입력해주세요." />
-        <button id="searchBtn" type="submit">검색</button>
+    <header>
+      <a href="/">
+        <img src="/images/logo.png" alt="" srcset="" />
+      </a>
+      <form id="search" action="search.html" method="get">
+        <input id="searchInput" type="text" name="query" placeholder="검색어를 입력해주세요." required />
+        <button id="searchBtn" type="submit">&nbsp;</button>
       </form>
     </header>
 
@@ -23,7 +24,7 @@
       <button id="morePage" class="page" type="button">더 보기</button>
     </main>
 
-    <footer class="container">
+    <footer>
       <p>
         <a href="https://developer.themoviedb.org/reference/intro/getting-started">TMDB 오픈 API</a>
       </p>

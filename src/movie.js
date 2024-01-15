@@ -6,23 +6,23 @@ export function createCard(response) {
   let html = "";
   movies.forEach((movie) => (html += renderCardHTML(movie)));
   document.getElementById("movies").insertAdjacentHTML("beforeend", html);
-  movies.forEach((movie) => createGenreList(movie.id, movie.genre_ids));
+  checkLastPage(movies.length);
 }
 
 function renderCardHTML(movie) {
   let src = "";
   if (movie.poster_path) {
-    src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+    src = `https://image.tmdb.org/t/p/w300${movie.backdrop_path}`;
   } else {
     src = "images/noimage.jpg";
   }
 
   return `
-  <div id="${movie.id}">
+  <div id="${movie.id}" class="card">
     <img class="poster" src="${src}" alt="${movie.title}"/>
-    <h2 class="title">${movie.title}</h2>
-    <ul class="genre"></ul>
-    <p class="vote">${(movie.vote_average * 10).toFixed(1)}%</p>
+    <div class="over">
+      <h2 class="title">${movie.title}</h2>
+    </div>
   </div>`;
 }
 
@@ -39,27 +39,31 @@ function createGenreList(movieId, genreIds) {
 export function handleClickCard(event) {
   const cardList = document.getElementById("movies");
   if (event.target === cardList) return;
-  let target = event.target.matches("div") ? event.target : event.target.parentNode;
+  let target = event.target.closest(".card");
+  alert(`${target.id}`); // 나중에 지우세요.
   location.href = `detail.html?id=${target.id}`;
 }
 
-export async function loadPost({ id, backdrop_path, title, release_date, genres, overview }) {
+export async function loadPost({ id, backdrop_path, title, release_date, genres, overview, vote_average }) {
   let dataLoad = `
-  <main class="detail_main">
+  <div class="detail_main">
     <div class="detail_bg">
       <img src="https://image.tmdb.org/t/p/original${backdrop_path}" alt="영화이미지" class="detail_bg_img"/>
     </div>
-  </main>
+  </div>
   <section class="detail_section">
     <h1 class="detail_movie_title">${title}</h1>
     <div class="detail_movie_wrap_two" id="${id}">
       <ul class="genre"></ul>
       <p class="detail_movie_wrap_year">${release_date}</p>
     </div>
+    <div class="detail_movie_vote">
+      <p class="detail_movie_vote_average">${vote_average}</p>
+    </div>
     <div class="detail_movie_over_view">
       <p class="detail_movie_over_view_text">${overview}</p>
     </div>
-    <button class="detail_movie_appreciate">감상하기</button>
+    <a href ="#detail_commentView" class="detail_movie_appreciate" >리뷰 남기기</a>
   </section>`;
 
   document.getElementById("moviePost").insertAdjacentHTML("beforeend", dataLoad);
@@ -69,6 +73,7 @@ export async function loadPost({ id, backdrop_path, title, release_date, genres,
 
 export function checkLastPage(dataLength) {
   const morePageBtn = document.getElementById("morePage");
+  console.log(dataLength);
   if (dataLength < 20) {
     morePageBtn.disabled = true;
     morePageBtn.textContent = dataLength === 0 ? "검색결과가 없습니다." : "다음 페이지가 없습니다.";
