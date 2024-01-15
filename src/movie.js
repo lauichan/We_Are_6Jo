@@ -63,8 +63,6 @@ export async function loadPost({ id, backdrop_path, title, release_date, genres,
       <p class="detail_movie_over_view_text">${overview}</p>
     </div>
     <a href ="#detail_commentView" class="detail_movie_appreciate" >리뷰 남기기</a>
-    
-    
   </section>`;
 
   document.getElementById("moviePost").insertAdjacentHTML("beforeend", dataLoad);
