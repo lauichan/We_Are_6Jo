@@ -393,7 +393,7 @@ footer {
   border-radius: 5px;
 }
 
-.detail_comment_list_img > .starAndBtn {
+.detail_comment_list > .starAndBtn {
   display: flex;
   justify-content: space-between;
 }
