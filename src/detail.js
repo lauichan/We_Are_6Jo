@@ -3,9 +3,9 @@ import { sendReview, loadReview } from "./review.js";
 
 async function load() {
   await loadGenre();
-  loadReview();
   moviePage();
+  loadReview();
 }
 
 load();
-document.getElementById("detailCommentReviewWrap").addEventListener("submit", sendReview);
+document.getElementById("detailReviewForm").addEventListener("submit", sendReview);

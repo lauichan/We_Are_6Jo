@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>detail page by</title>
-
+    <title>SIXFLIX</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <script type="module" src="./src/detail.js"></script>
@@ -21,50 +20,34 @@
     <main class="container">
       <div id="moviePost"></div>
 
-      <section class="detail_comment" id="detail_commentView">
-        <div class="detail_comment_title">영화 사용자 감상평</div>
-        <!--댓글 창 만들기-->
-        <form class="detail_comment_review_wrap" id="detailCommentReviewWrap">
+      <section id="detailComment">
+        <h2 class="detail_comment_title">영화 사용자 감상평</h2>
+        <form id="detailReviewForm">
           <div class="detail_wrap_comment_idPwd">
             <input type="text" id="detailReviewUserId" minlength="2" maxlength="50" placeholder="아이디" required />
-            <input
-              type="password"
-              id="detailReviewUserPwd"
-              minlength="2"
-              maxlength="50"
-              placeholder="비밀번호"
-              required
-            />
+            <input type="password" id="detailReviewUserPwd" minlength="2" maxlength="50" placeholder="비밀번호" required />
           </div>
-          <div class="detail_wrap_star_btn">
-            <textarea
-              class="detail_review_text"
-              id="detailReviewContent"
-              minlength="2"
-              maxlength="300"
-              placeholder="리뷰를 남겨주세요."
-              required
-            ></textarea
-            ><br />
-            <div class="detail_wrap_bottom">
-              <select class="detail_review_star" id="detailReviewStar" required>
-                <option selected value="" hidden>별점을 남겨주세요</option>
-                <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
-                <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
-                <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
-                <option value="⭐️⭐️">⭐️⭐️</option>
-                <option value="⭐️">⭐️</option>
-              </select>
-              <div class="detail_review_button">
-                <button type="reset" id="detailReviewResetBtn">취소</button>
-                <button type="submit" id="detailReviewSubmitBtn">저장</button>
-              </div>
+          <textarea id="detailReviewContent" minlength="2" maxlength="300" placeholder="리뷰를 남겨주세요." required></textarea>
+          <div class="detail_wrap_bottom">
+            <select id="detailReviewStar" required>
+              <option selected value="" hidden>별점을 남겨주세요</option>
+              <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+              <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+              <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+              <option value="⭐️⭐️">⭐️⭐️</option>
+              <option value="⭐️">⭐️</option>
+            </select>
+            <div class="detail_review_button">
+              <button type="reset" id="detailReviewResetBtn">취소</button>
+              <button type="submit" id="detailReviewSubmitBtn">저장</button>
             </div>
           </div>
         </form>
       </section>
-      <ul class="detail_comment_wrap_list" id="movieReview"></ul>
+
+      <ul id="movieReview"></ul>
     </main>
+
     <footer class="container">
       <p>
         <a href="https://developer.themoviedb.org/reference/intro/getting-started">TMDB 오픈 API</a>

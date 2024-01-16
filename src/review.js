@@ -1,6 +1,6 @@
 import { movie_id } from "./fetch.js";
 
-const form = document.getElementById("detailCommentReviewWrap");
+const form = document.getElementById("detailReviewForm");
 const userId = document.getElementById("detailReviewUserId");
 const userPwd = document.getElementById("detailReviewUserPwd");
 const userStar = document.getElementById("detailReviewStar");
