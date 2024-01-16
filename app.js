@@ -1,11 +1,10 @@
 // 메인 파일
-import { loadGenre, loadPage } from "./src/fetch.js";
+import { loadPage } from "./src/fetch.js";
 import { handleClickCard } from "./src/movie.js";
 
 let currentPage = 1;
 
 async function load() {
-  await loadGenre();
   return loadPage(currentPage);
 }
 
