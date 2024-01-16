@@ -14,14 +14,6 @@
   --movie-genreMystery-color: navy;
   --layer-line-color: #ffffff38;
   --layer-background-color: #343434;
-
-  --font-MBC1961M: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961M.woff2") format("woff2");
-  --font-LINESeedKR-Bd: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2")
-    format("woff2");
-  --font-GmarketSansMedium: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
-    format("woff");
-
-  /* Add other global variables here */
 }
 
 @font-face {
@@ -222,7 +214,7 @@ footer {
   font-size: 80%;
 }
 
-/* 디테일 */
+/* 상세페이지 */
 .detail_movie_title {
   font-weight: bold;
   font-size: 2rem;
@@ -277,9 +269,7 @@ footer {
 
 .rightSide > .detail_movie_appreciate:hover {
   color: rgba(255, 0, 0, 0.692);
-  transition: all 0.5s;
-  background-color: #343434;
-  width: 200px;
+  transition: all 0.3s;
 }
 
 .detail_comment {
@@ -332,21 +322,21 @@ footer {
   padding: 0.5rem;
   border: none;
   color: #fff;
-}
-
-#detailReviewUserId {
-  background: url("https://api.iconify.design/fa6-regular/address-card.svg?color=white") no-repeat left 0.5rem center /
-    contain;
-  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: left 0.5rem center;
   background-color: #343434;
   padding-left: 2.3rem;
+}
+
+/*  */
+#detailReviewUserId {
+  background-image: url("https://api.iconify.design/fa6-regular/address-card.svg?color=white");
+  background-size: 20px 20px;
 }
 
 #detailReviewUserPwd {
-  background: url("https://api.iconify.design/fa6-solid/lock.svg?color=white") no-repeat left 0.5rem center / contain;
+  background-image: url("https://api.iconify.design/fa6-solid/lock.svg?color=white");
   background-size: 18px 18px;
-  background-color: #343434;
-  padding-left: 2.3rem;
 }
 
 #detailReviewContent {
@@ -355,6 +345,7 @@ footer {
   font-size: 110%;
 }
 
+/* 리뷰 작성란 Id */
 .detail_review_userId {
   flex-direction: column;
   background-color: #343434;
@@ -362,12 +353,14 @@ footer {
   border: none;
 }
 
+/* 리뷰 작성란 Pwd */
 .detail_review_userPwd {
   background-color: #343434;
   color: white;
   border: none;
 }
 
+/* 리뷰 작성란 text */
 .detail_review_text {
   border: none;
   background-color: #343434;
@@ -398,6 +391,7 @@ footer {
   gap: 0.55rem;
 }
 
+/* 리뷰 취소버튼 */
 #detailReviewResetBtn {
   border-radius: 5px;
   padding: 10px;
@@ -415,6 +409,7 @@ footer {
   transition: all 0.3s;
 }
 
+/* 리뷰 저장버튼 */
 #detailReviewSubmitBtn {
   border-radius: 5px;
   padding: 10px;
@@ -432,8 +427,8 @@ footer {
   transition: all 0.3s;
 }
 
+/* 리뷰리스트 */
 .detail_comment_list {
-  /* background-color: #84868d; */
   margin-top: 14px;
   background-color: #343434;
   border: 1px solid #ffffff38;
@@ -458,12 +453,14 @@ footer {
   align-items: center;
 }
 
+/* 리뷰 별점버튼 */
 .detail_comment_list > .starAndBtn {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
+/* 리뷰삭제버튼 */
 #deleteReview {
   display: flex;
   padding: 10px;
@@ -493,7 +490,8 @@ footer {
   padding: 0.1rem 0.3rem;
 }
 
-/* crime */
+/* 여기서부터 장르별 색상분류입니다. */
+
 .crime {
   background-color: var(--movie-genreCrim-color);
 }
