@@ -8,14 +8,11 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <script type="module" src="src/detail.js"></script>
-    <script src="https://kit.fontawesome.com/7423cdffa2.js" crossorigin="anonymous"></script>
-
-    <title>detail page by</title>
   </head>
   <body>
     <header>
-      <a href="/">
-        <img src="/images/logo.png" alt="" srcset="" />
+      <a class="brand" href="/">
+        <img src="/images/002.png" alt="" srcset="" />
       </a>
 
       <form id="search" action="search.html" method="get">
@@ -32,21 +29,27 @@
         <!--댓글 창 만들기-->
         <form class="detail_comment_review_wrap" id="detailCommentReviewWrap">
           <div class="detail_wrap_comment_idPwd">
-            <i class="fa-regular fa-id-card"></i>
-            <input type="text" class="detail_review_userId" id="detailReviewUserId" placeholder="아이디" required />
-            <i class="fa-solid fa-lock"></i>
+            <input type="text" id="detailReviewUserId" minlength="2" maxlength="50" placeholder="아이디" required />
             <input
               type="password"
-              class="detail_review_userPwd"
               id="detailReviewUserPwd"
+              minlength="2"
+              maxlength="50"
               placeholder="비밀번호"
               required
             />
           </div>
-
           <div class="detail_wrap_star_btn">
-            <div class="detail_review_content">
-              <textarea class="detail_review_text" id="detailReviewContent" maxlength="50" required></textarea><br />
+            <textarea
+              class="detail_review_text"
+              id="detailReviewContent"
+              minlength="2"
+              maxlength="300"
+              placeholder="리뷰를 남겨주세요."
+              required
+            ></textarea
+            ><br />
+            <div class="detail_wrap_bottom">
               <select class="detail_review_star" id="detailReviewStar" required>
                 <option selected value="" hidden>별점을 남겨주세요</option>
                 <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
@@ -55,15 +58,15 @@
                 <option value="⭐️⭐️">⭐️⭐️</option>
                 <option value="⭐️">⭐️</option>
               </select>
+              <div class="detail_review_button">
+                <button type="reset" id="detailReviewResetBtn">취소</button>
+                <button type="submit" id="detailReviewSubmitBtn">저장</button>
+              </div>
             </div>
-
-            <button type="submit" id="detailReviewSubmitBtn">저장</button>
-            <button type="reset" id="detailReviewResetBtn">취소</button>
           </div>
         </form>
-
-        <ul class="detail_comment_wrap_list" id="movieReview"></ul>
       </section>
+      <ul class="detail_comment_wrap_list" id="movieReview"></ul>
     </main>
   </body>
 </html>
