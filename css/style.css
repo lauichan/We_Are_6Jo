@@ -448,14 +448,14 @@ footer {
 
 /* 리뷰창 ID */
 .detail_comment_list > .detail_comment_list_user > .detail_comment_list_user_id {
-  font-family: GmarketSansMedium;
+  font-family: "GmarketSansMedium";
   font-size: 1.5rem;
   gap: 0.5rem;
 }
 
 /* 리뷰창 Pwd */
 .detail_comment_list > .detail_comment_list_user > .detail_comment_list_user_text {
-  font-family: GmarketSansMedium;
+  font-family: "GmarketSansMedium";
   display: flex;
   font-size: 1.2rem;
   align-items: center;
