@@ -1,6 +1,6 @@
 // 메인 파일
-import { loadPage } from "./src/fetch.js";
-import { handleClickCard } from "./src/movie.js";
+import { loadPage } from "./fetch.js";
+import { handleClickCard } from "./movie.js";
 
 let currentPage = 1;
 
