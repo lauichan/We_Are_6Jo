@@ -3,7 +3,7 @@ import { apikey } from "./apikeys.js";
 
 let urls = "https://api.themoviedb.org/3/";
 
-export let genreList;
+export let genreList, movie_id;
 
 export async function loadJSON(url) {
   try {
@@ -11,7 +11,7 @@ export async function loadJSON(url) {
     const data = await response.json();
     return data;
   } catch (error) {
-    alert("서버에서 데이터를 불러올수 없습니다.");
+    alert(`서버에서 데이터를 불러올수 없습니다.\n${error}`);
   }
 }
 
@@ -28,9 +28,9 @@ export async function loadPage(page) {
   createCard(data);
 }
 
-export async function moviePage(movie_id) {
+export async function moviePage() {
+  movie_id = new URL(location.href).searchParams.get("id");
   const data = await loadJSON(`${urls}movie/${movie_id}?api_key=${apikey}&language=en`);
-  console.log(data); //별도의 영화 id를 추가해서 정보를 빼려고 준비중입니다.
   loadPost(data);
 }
 

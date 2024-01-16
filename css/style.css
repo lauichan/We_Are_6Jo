@@ -49,7 +49,6 @@ a {
   color: inherit;
 }
 
-/* 장르가 들어갈 ul태그입니다. */
 ul {
   margin-bottom: 2rem;
 }
@@ -353,7 +352,6 @@ footer {
   font-family: "LINESeedKR-Bd";
 }
 
-/* 리뷰 작성란 Id */
 .detail_review_userId {
   flex-direction: column;
   background-color: #343434;
@@ -361,14 +359,12 @@ footer {
   border: none;
 }
 
-/* 리뷰 작성란 Pwd */
 .detail_review_userPwd {
   background-color: #343434;
   color: white;
   border: none;
 }
 
-/* 리뷰 작성란 text */
 .detail_review_text {
   border: none;
   background-color: #343434;
@@ -399,7 +395,6 @@ footer {
   gap: 0.55rem;
 }
 
-/* 리뷰 취소버튼 */
 #detailReviewResetBtn {
   border-radius: 5px;
   padding: 10px;
@@ -417,7 +412,6 @@ footer {
   transition: all 0.3s;
 }
 
-/* 리뷰 저장버튼 */
 #detailReviewSubmitBtn {
   border-radius: 5px;
   padding: 10px;
@@ -435,7 +429,6 @@ footer {
   transition: all 0.3s;
 }
 
-/* 리뷰리스트 */
 .detail_comment_list {
   margin-top: 14px;
   background-color: #343434;
@@ -446,14 +439,12 @@ footer {
   border-radius: 5px;
 }
 
-/* 리뷰창 ID */
 .detail_comment_list > .detail_comment_list_user > .detail_comment_list_user_id {
   font-family: "GmarketSansMedium";
   font-size: 1.5rem;
   gap: 0.5rem;
 }
 
-/* 리뷰창 Pwd */
 .detail_comment_list > .detail_comment_list_user > .detail_comment_list_user_text {
   font-family: "GmarketSansMedium";
   display: flex;
@@ -461,14 +452,12 @@ footer {
   align-items: center;
 }
 
-/* 리뷰 별점버튼 */
 .detail_comment_list > .starAndBtn {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
-/* 리뷰삭제버튼 */
 #deleteReview {
   display: flex;
   padding: 10px;
@@ -497,8 +486,6 @@ footer {
   border-radius: 5px;
   padding: 0.1rem 0.3rem;
 }
-
-/* 여기서부터 장르별 색상분류입니다. */
 
 .crime {
   background-color: var(--movie-genreCrim-color);
