@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>detail page by</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script type="module" src="src/detail.js"></script>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">
+        <img src="/images/002.png" alt="" srcset="" />
+      </a>
+
+      <form id="search" action="search.html" method="get">
+        <input id="searchInput" type="text" name="query" placeholder="검색어를 입력해주세요." required />
+        <button id="searchBtn" type="submit">&nbsp;</button>
+      </form>
+    </header>
+
+    <main class="container">
+      <div id="moviePost"></div>
+
+      <section class="detail_comment" id="detail_commentView">
+        <div class="detail_comment_title">영화 사용자 감상평</div>
+        <!--댓글 창 만들기-->
+        <form class="detail_comment_review_wrap" id="detailCommentReviewWrap">
+          <div class="detail_wrap_comment_idPwd">
+            <input type="text" id="detailReviewUserId" minlength="2" maxlength="50" placeholder="아이디" required />
+            <input
+              type="password"
+              id="detailReviewUserPwd"
+              minlength="2"
+              maxlength="50"
+              placeholder="비밀번호"
+              required
+            />
+          </div>
+          <div class="detail_wrap_star_btn">
+            <textarea
+              class="detail_review_text"
+              id="detailReviewContent"
+              minlength="2"
+              maxlength="300"
+              placeholder="리뷰를 남겨주세요."
+              required
+            ></textarea
+            ><br />
+            <div class="detail_wrap_bottom">
+              <select class="detail_review_star" id="detailReviewStar" required>
+                <option selected value="" hidden>별점을 남겨주세요</option>
+                <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+                <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+                <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+                <option value="⭐️⭐️">⭐️⭐️</option>
+                <option value="⭐️">⭐️</option>
+              </select>
+              <div class="detail_review_button">
+                <button type="reset" id="detailReviewResetBtn">취소</button>
+                <button type="submit" id="detailReviewSubmitBtn">저장</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+      <ul class="detail_comment_wrap_list" id="movieReview"></ul>
+    </main>
+  </body>
+</html>
